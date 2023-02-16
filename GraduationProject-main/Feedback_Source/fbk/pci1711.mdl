@@ -1,0 +1,335 @@
+Library {
+  Name			  "pci1711"
+  Version		  4.00
+  LibraryLinkDisplay	  "none"
+  CovSaveName		  "covdata"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  off
+  StatusBar		  off
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  Created		  "Sun Jun 17 23:01:52 2001"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "Administrator"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Sat Feb 02 15:19:39 2002"
+  ModelVersionFormat	  "1.%<AutoIncrement:14>"
+  ConfigurationManager	  "none"
+  SimParamPage		  "Solver"
+  AlgebraicLoopMsg	  "warning"
+  MinStepSizeMsg	  "warning"
+  UnconnectedInputMsg	  "warning"
+  UnconnectedOutputMsg	  "warning"
+  UnconnectedLineMsg	  "warning"
+  InheritedTsInSrcMsg	  "warning"
+  SingleTaskRateTransMsg  "none"
+  MultiTaskRateTransMsg	  "error"
+  IntegerOverflowMsg	  "warning"
+  CheckForMatrixSingularity "none"
+  UnnecessaryDatatypeConvMsg "none"
+  Int32ToFloatConvMsg	  "warning"
+  SignalLabelMismatchMsg  "none"
+  LinearizationMsg	  "none"
+  VectorMatrixConversionMsg "none"
+  SfunCompatibilityCheckMsg "none"
+  BlockPriorityViolationMsg "warning"
+  ArrayBoundsChecking	  "none"
+  ConsistencyChecking	  "none"
+  Profile		  off
+  SimulationMode	  "normal"
+  RTWRetainRTWFile	  off
+  RTWMakeCommand	  "make_rtw"
+  RTWGenerateCodeOnly	  off
+  TLCProfiler		  off
+  TLCDebug		  off
+  TLCCoverage		  off
+  ExtModeMexFile	  "ext_comm"
+  ExtModeBatchMode	  off
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeLogAll		  on
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  System {
+    Name		    "pci1711"
+    Location		    [474, 161, 726, 307]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "automatic"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    ZoomFactor		    "100"
+    AutoZoom		    on
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      SubSystem
+      Name		      "Advantech \nPCI1711 I/O Board Lib"
+      Ports		      []
+      Position		      [55, 40, 161, 104]
+      BackgroundColor	      "green"
+      ShowPortLabels	      on
+      TreatAsAtomicUnit	      off
+      RTWSystemCode	      "Auto"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      MaskType		      "PCI 1711 I/O Board Lib"
+      MaskDisplay	      "plot(0,0,100,100,[90,80,80,11,11],[90,90,20,20,"
+"80],[11,80],[80,80],[80,80],[20,14],[80,85,85,80],[45,45,66,66],[45,45,74,74]"
+",[20,13,13,20],[15,27,27,15,15],[75,75,26,26,75],[33,48,48,33,33],[75,75,55,5"
+"5,75],[55,55,71,71,55],[55,75,75,55,55],[33,41,41,33,33],[50,50,27,27,50],[48"
+",56,56,48,48],[50,50,27,27,50],[62,70,70,62,62],[50,50,27,27,50])"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      System {
+	Name			"Advantech \nPCI1711 I/O Board Lib"
+	Location		[166, 76, 706, 336]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"automatic"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	AutoZoom		on
+	Block {
+	  BlockType		  "S-Function"
+	  Name			  "Analog Input"
+	  Ports			  [0, 1]
+	  Position		  [75, 153, 185, 227]
+	  BackgroundColor	  "green"
+	  FunctionName		  "pci1711ad"
+	  Parameters		  "channel,rangeGain,tsamp,hwAccess"
+	  PortCounts		  "[]"
+	  SFunctionModules	  "''"
+	  MaskType		  "Analog Input Unit"
+	  MaskDescription	  "Analog to Digital Input block for the\n Adv"
+"antech PCI1711  I/O board "
+	  MaskPromptString	  "Input Channel|ADC Range Gain  (0 for -/+5V "
+"1 for -/+2.5V 2 for -/+1.25 3 for -/+0.625V)|sampling Time (sec)|Hardware Acc"
+"ess"
+	  MaskStyleString	  "edit,edit,edit,checkbox"
+	  MaskTunableValueString  "on,on,on,on"
+	  MaskCallbackString	  "|||"
+	  MaskEnableString	  "on,on,on,on"
+	  MaskVisibilityString	  "on,on,on,on"
+	  MaskToolTipString	  "on,on,on,on"
+	  MaskVariables		  "channel=@1;rangeGain=@2;tsamp=@3;hwAccess=@"
+"4;"
+	  MaskDisplay		  "disp('PCI1711\\n Lab I/O Board \\n\\n ADC')"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "0|0|0.001|on"
+	  MaskVariableAliases	  ",,,"
+	}
+	Block {
+	  BlockType		  "S-Function"
+	  Name			  "Analog Output"
+	  Ports			  [1]
+	  Position		  [70, 27, 170, 103]
+	  BackgroundColor	  "green"
+	  FunctionName		  "pci1711da"
+	  Parameters		  "outChannel,range,tsamp,hwAccess"
+	  PortCounts		  "[]"
+	  SFunctionModules	  "''"
+	  MaskType		  "Analog Output Unit"
+	  MaskDescription	  "Digital to Analog Output block for the\n Ad"
+"vantech PCI1711  I/O board "
+	  MaskPromptString	  "Output Channel|Range Selector (0 for 0-5V a"
+"nd 1 for 0-10V range)|sample Time (sec)|Access Hardware"
+	  MaskStyleString	  "edit,edit,edit,checkbox"
+	  MaskTunableValueString  "on,on,on,on"
+	  MaskCallbackString	  "|||"
+	  MaskEnableString	  "on,on,on,on"
+	  MaskVisibilityString	  "on,on,on,on"
+	  MaskToolTipString	  "on,on,on,on"
+	  MaskVariables		  "outChannel=@1;range=@2;tsamp=@3;hwAccess=@4"
+";"
+	  MaskDisplay		  "disp('PCI1711 \\n Lab I/O Board \\n\\n DAC'"
+")"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "0|0|0.001|on"
+	  MaskVariableAliases	  ",,,"
+	}
+	Block {
+	  BlockType		  "S-Function"
+	  Name			  "Digital Input Unit"
+	  Ports			  [0, 1]
+	  Position		  [370, 40, 460, 110]
+	  BackgroundColor	  "green"
+	  FunctionName		  "pci1711DigIn"
+	  Parameters		  "channel,tsamp,hwaccess"
+	  PortCounts		  "[]"
+	  SFunctionModules	  "''"
+	  MaskType		  "Digital Input Unit"
+	  MaskDescription	  "Digital Input  Block"
+	  MaskPromptString	  "Channel (0 or 1)|sample Time (sec)|Access H"
+"ardware"
+	  MaskStyleString	  "edit,edit,checkbox"
+	  MaskTunableValueString  "on,on,on"
+	  MaskCallbackString	  "||"
+	  MaskEnableString	  "on,on,on"
+	  MaskVisibilityString	  "on,on,on"
+	  MaskToolTipString	  "on,on,on"
+	  MaskVariables		  "channel=@1;tsamp=@2;hwaccess=@3;"
+	  MaskDisplay		  "disp('PCI1711 \\n Lab I/O Board \\n\\n Digi"
+"tal Input')"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "0|0.001|on"
+	  MaskVariableAliases	  ",,"
+	}
+	Block {
+	  BlockType		  "S-Function"
+	  Name			  "Digital Output Unit"
+	  Ports			  [1]
+	  Position		  [370, 155, 470, 235]
+	  BackgroundColor	  "green"
+	  FunctionName		  "pci1711DigOut"
+	  Parameters		  "channel,tsamp,hwAccess"
+	  PortCounts		  "[]"
+	  SFunctionModules	  "''"
+	  MaskType		  "Digital Output Unit"
+	  MaskDescription	  "Digital Output Block "
+	  MaskPromptString	  "Channel (0 or 1)|sample Time (sec)|Access H"
+"ardware"
+	  MaskStyleString	  "edit,edit,checkbox"
+	  MaskTunableValueString  "on,on,on"
+	  MaskCallbackString	  "||"
+	  MaskEnableString	  "on,on,on"
+	  MaskVisibilityString	  "on,on,on"
+	  MaskToolTipString	  "on,on,on"
+	  MaskVariables		  "channel=@1;tsamp=@2;hwAccess=@3;"
+	  MaskDisplay		  "disp('PCI1711 \\n Lab I/O Board \\n\\n Digi"
+"tal Output')"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "0|0.001|on"
+	  MaskVariableAliases	  ",,"
+	}
+	Block {
+	  BlockType		  "S-Function"
+	  Name			  "Feedback DAC"
+	  Ports			  [1]
+	  Position		  [210, 32, 310, 108]
+	  BackgroundColor	  "green"
+	  FunctionName		  "pci1711FedDac"
+	  Parameters		  "channel,range,tsamp,hwAccess"
+	  PortCounts		  "[]"
+	  SFunctionModules	  "''"
+	  MaskType		  "DAC Unit for Feedback Experiments"
+	  MaskDescription	  "Digital to Analog Output  for Feedback Expe"
+"riments \nusing Advantech PCI1711  I/O board \n\n"
+	  MaskPromptString	  "Output Channel|Range Selector (0 for -/+2.5"
+"V, 1 for -/+5V range)|sample Time (sec)|Access Hardware"
+	  MaskStyleString	  "edit,edit,edit,checkbox"
+	  MaskTunableValueString  "on,on,on,on"
+	  MaskCallbackString	  "|||"
+	  MaskEnableString	  "on,on,on,on"
+	  MaskVisibilityString	  "on,on,on,on"
+	  MaskToolTipString	  "on,on,on,on"
+	  MaskVariables		  "channel=@1;range=@2;tsamp=@3;hwAccess=@4;"
+	  MaskDisplay		  "disp('PCI1711 \\n Lab I/O Board \\n\\n Feed"
+"back  DAC')"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "0|0|0.001|on"
+	  MaskVariableAliases	  ",,,"
+	}
+	Block {
+	  BlockType		  "S-Function"
+	  Name			  "Feedback Encoder "
+	  Ports			  [0, 1]
+	  Position		  [215, 154, 330, 226]
+	  BackgroundColor	  "green"
+	  FunctionName		  "pci1711FedEnc"
+	  Parameters		  "channel,offset,tsamp,hwAccess"
+	  PortCounts		  "[]"
+	  SFunctionModules	  "''"
+	  MaskType		  "Feedback Encoder Block"
+	  MaskDescription	  "Special block to use with the Feedback expe"
+"riments to read encoder channels using the digital I/O lines"
+	  MaskPromptString	  "Channel (0 or 1)|Encoder Offset|sample Time"
+" (sec)|Access Hardware"
+	  MaskStyleString	  "edit,edit,edit,checkbox"
+	  MaskTunableValueString  "on,on,on,on"
+	  MaskCallbackString	  "|||"
+	  MaskEnableString	  "on,on,on,on"
+	  MaskVisibilityString	  "on,on,on,on"
+	  MaskToolTipString	  "on,on,on,on"
+	  MaskVariables		  "channel=@1;offset=@2;tsamp=@3;hwAccess=@4;"
+	  MaskDisplay		  "disp('PCI1711 \\n Lab I/O Board \\n\\n Feed"
+"back Encoder')"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "0|0|0.001|on"
+	  MaskVariableAliases	  ",,,"
+	}
+      }
+    }
+  }
+}

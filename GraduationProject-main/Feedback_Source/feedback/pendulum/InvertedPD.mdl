@@ -1,0 +1,2576 @@
+Model {
+  Name			  "InvertedPD1"
+  Version		  5.0
+  SaveDefaultBlockParams  on
+  SampleTimeColors	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ExecutionOrder	  off
+  RecordCoverage	  off
+  CovPath		  "/"
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeVarName	  "covCumulativeData"
+  CovCumulativeReport	  off
+  DataTypeOverride	  "UseLocalSettings"
+  MinMaxOverflowLogging	  "UseLocalSettings"
+  MinMaxOverflowArchiveMode "Overwrite"
+  BlockNameDataTip	  off
+  BlockParametersDataTip  on
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  Created		  "Wed Jul 19 00:03:05 2000"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "cedrics"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Tue Apr 30 17:20:09 2002"
+  ModelVersionFormat	  "1.%<AutoIncrement:59>"
+  ConfigurationManager	  "none"
+  SimParamPage		  "RTW"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  TryForcingSFcnDF	  off
+  ExtModeMexFile	  "rtwinext"
+  ExtModeBatchMode	  off
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "oneshot"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  100000
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  off
+  ExtModeAutoUpdateStatusClock on
+  BufferReuse		  on
+  RTWExpressionDepthLimit 5
+  SimulationMode	  "external"
+  Solver		  "ode1"
+  SolverMode		  "SingleTasking"
+  StartTime		  "0.0"
+  StopTime		  "70.0"
+  MaxOrder		  5
+  MaxStep		  "auto"
+  MinStep		  "auto"
+  MaxNumMinSteps	  "-1"
+  InitialStep		  "auto"
+  FixedStep		  "0.001"
+  RelTol		  "1e-3"
+  AbsTol		  "auto"
+  OutputOption		  "RefineOutputTimes"
+  OutputTimes		  "[]"
+  Refine		  "1"
+  LoadExternalInput	  off
+  ExternalInput		  "[t, u]"
+  LoadInitialState	  off
+  InitialState		  "xInitial"
+  SaveTime		  on
+  TimeSaveName		  "tout"
+  SaveState		  off
+  StateSaveName		  "xout"
+  SaveOutput		  on
+  OutputSaveName	  "yout"
+  SaveFinalState	  off
+  FinalStateName	  "xFinal"
+  SaveFormat		  "Array"
+  Decimation		  "1"
+  LimitDataPoints	  off
+  MaxDataPoints		  "1000"
+  SignalLoggingName	  "sigsOut"
+  ConsistencyChecking	  "none"
+  ArrayBoundsChecking	  "none"
+  AlgebraicLoopMsg	  "warning"
+  BlockPriorityViolationMsg "warning"
+  MinStepSizeMsg	  "warning"
+  InheritedTsInSrcMsg	  "warning"
+  DiscreteInheritContinuousMsg "warning"
+  MultiTaskRateTransMsg	  "error"
+  SingleTaskRateTransMsg  "none"
+  CheckForMatrixSingularity "none"
+  IntegerOverflowMsg	  "warning"
+  Int32ToFloatConvMsg	  "warning"
+  ParameterDowncastMsg	  "error"
+  ParameterOverflowMsg	  "error"
+  ParameterPrecisionLossMsg "warning"
+  UnderSpecifiedDataTypeMsg "none"
+  UnnecessaryDatatypeConvMsg "none"
+  VectorMatrixConversionMsg "none"
+  InvalidFcnCallConnMsg	  "error"
+  SignalLabelMismatchMsg  "none"
+  UnconnectedInputMsg	  "warning"
+  UnconnectedOutputMsg	  "warning"
+  UnconnectedLineMsg	  "warning"
+  SfunCompatibilityCheckMsg "none"
+  RTWInlineParameters	  off
+  BlockReductionOpt	  off
+  BooleanDataType	  off
+  ConditionallyExecuteInputs on
+  ParameterPooling	  on
+  OptimizeBlockIOStorage  on
+  ZeroCross		  on
+  AssertionControl	  "UseLocalSettings"
+  ProdHWDeviceType	  "Microprocessor"
+  ProdHWWordLengths	  "8,16,32,32"
+  RTWSystemTargetFile	  "rtwinfbk.tlc"
+  RTWTemplateMakefile	  "winfbktmf"
+  RTWMakeCommand	  "make_rtw"
+  RTWGenerateCodeOnly	  off
+  RTWRetainRTWFile	  off
+  TLCProfiler		  off
+  TLCDebug		  off
+  TLCCoverage		  off
+  TLCAssertion		  off
+  RTWOptions		  " -aCCOptimize=1 -aEnforceIntegerDowncast=1 -aExtMod"
+"e=1 -aFoldNonRolledExpr=1 -aForceParamTrailComments=0 -aGenerateComments=1 -a"
+"GenerateReport=0 -aIncDataTypeInIds=0 -aIncHierarchyInIds=0 -aInlineInvariant"
+"Signals=0 -aInlineParameters=0 -aInlinedPrmAccess=\"Literals\" -aLocalBlockOu"
+"tputs=1 -aMaxRTWIdLen=31 -aPrefixModelToSubsysFcnNames=1 -aRTWVerbose=1 -aReb"
+"uildAll=0 -aRollThreshold=5 -aShowEliminatedStatements=1"
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      Constant
+      Value		      "1"
+      VectorParams1D	      on
+      ShowAdditionalParam     off
+      OutDataTypeMode	      "Inherit from 'Constant value'"
+      OutDataType	      "sfix(16)"
+      ConRadixGroup	      "Use specified scaling"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Demux
+      Outputs		      "4"
+      DisplayOption	      "none"
+      BusSelectionMode	      off
+    }
+    Block {
+      BlockType		      Derivative
+    }
+    Block {
+      BlockType		      Fcn
+      Expr		      "sin(u[1])"
+    }
+    Block {
+      BlockType		      Gain
+      Gain		      "1"
+      Multiplication	      "Element-wise(K.*u)"
+      ShowAdditionalParam     off
+      ParameterDataTypeMode   "Same as input"
+      ParameterDataType	      "sfix(16)"
+      ParameterScalingMode    "Best Precision: Matrix-wise"
+      ParameterScaling	      "2^0"
+      OutDataTypeMode	      "Same as input"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Inport
+      Port		      "1"
+      PortDimensions	      "-1"
+      SampleTime	      "-1"
+      ShowAdditionalParam     off
+      LatchInput	      off
+      DataType		      "auto"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Mux
+      Inputs		      "4"
+      DisplayOption	      "none"
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Product
+      Inputs		      "2"
+      Multiplication	      "Element-wise(.*)"
+      ShowAdditionalParam     off
+      InputSameDT	      on
+      OutDataTypeMode	      "Same as first input"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Relay
+      OnSwitchValue	      "eps"
+      OffSwitchValue	      "eps"
+      OnOutputValue	      "1"
+      OffOutputValue	      "0"
+      ShowAdditionalParam     off
+      OutputDataTypeScalingMode	"All ports same datatype"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      ConRadixGroup	      "Use specified scaling"
+      ZeroCross		      on
+    }
+    Block {
+      BlockType		      Saturate
+      UpperLimit	      "0.5"
+      LowerLimit	      "-0.5"
+      LinearizeAsGain	      on
+      ZeroCross		      on
+    }
+    Block {
+      BlockType		      Scope
+      Floating		      off
+      ModelBased	      off
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "on"
+      Grid		      "on"
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      "S-Function"
+      FunctionName	      "system"
+      PortCounts	      "[]"
+      SFunctionModules	      "''"
+    }
+    Block {
+      BlockType		      SignalGenerator
+      WaveForm		      "sine"
+      Amplitude		      "1"
+      Frequency		      "1"
+      Units		      "Hertz"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      Signum
+      ZeroCross		      on
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      on
+      Permissions	      "ReadWrite"
+      RTWSystemCode	      "Auto"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      MinMaxOverflowLogging   "UseLocalSettings"
+    }
+    Block {
+      BlockType		      Sum
+      IconShape		      "rectangular"
+      Inputs		      "++"
+      ShowAdditionalParam     off
+      InputSameDT	      on
+      OutDataTypeMode	      "Same as first input"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Switch
+      Criteria		      "u2 >= Threshold"
+      Threshold		      "0"
+      ShowAdditionalParam     off
+      InputSameDT	      on
+      OutDataTypeMode	      "Inherit via internal rule"
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      ZeroCross		      on
+    }
+    Block {
+      BlockType		      TransferFcn
+      Numerator		      "[1]"
+      Denominator	      "[1 2 1]"
+      AbsoluteTolerance	      "auto"
+      Realization	      "auto"
+    }
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  System {
+    Name		    "InvertedPD1"
+    Location		    [7, 73, 704, 522]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    ZoomFactor		    "80"
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      SubSystem
+      Name		      "Control Subsystem"
+      Ports		      [3, 3]
+      Position		      [460, 189, 590, 401]
+      BackgroundColor	      "lightBlue"
+      FontSize		      12
+      FontWeight	      "bold"
+      TreatAsAtomicUnit	      off
+      Port {
+	PortNumber		1
+	Name			"Cart Velocity"
+	PropagatedSignals	"Cart Velocity"
+	TestPoint		off
+	LinearAnalysisOutput	off
+	LinearAnalysisInput	off
+	RTWStorageClass		"Auto"
+	DataLogging		off
+	DataLoggingNameMode	"SignalName"
+	DataLoggingDecimateData	off
+	DataLoggingDecimation	"2"
+	DataLoggingLimitDataPoints off
+	DataLoggingMaxPoints	"5000"
+      }
+      Port {
+	PortNumber		2
+	Name			"Pendulum Velocity"
+	PropagatedSignals	"Pendulum Velocity"
+	TestPoint		off
+	LinearAnalysisOutput	off
+	LinearAnalysisInput	off
+	RTWStorageClass		"Auto"
+	DataLogging		off
+	DataLoggingNameMode	"SignalName"
+	DataLoggingDecimateData	off
+	DataLoggingDecimation	"2"
+	DataLoggingLimitDataPoints off
+	DataLoggingMaxPoints	"5000"
+      }
+      Port {
+	PortNumber		3
+	Name			"Voltage"
+	TestPoint		off
+	LinearAnalysisOutput	off
+	LinearAnalysisInput	off
+	RTWStorageClass		"Auto"
+	DataLogging		off
+	DataLoggingNameMode	"SignalName"
+	DataLoggingDecimateData	off
+	DataLoggingDecimation	"2"
+	DataLoggingLimitDataPoints off
+	DataLoggingMaxPoints	"5000"
+      }
+      System {
+	Name			"Control Subsystem"
+	Location		[-54, 165, 817, 581]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "In1"
+	  Position		  [95, 48, 125, 62]
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "In2"
+	  Position		  [95, 148, 125, 162]
+	  Port			  "2"
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "In3"
+	  Position		  [805, 173, 835, 187]
+	  Orientation		  "left"
+	  Port			  "3"
+	}
+	Block {
+	  BlockType		  Derivative
+	  Name			  "Cart Velocity"
+	  Position		  [225, 40, 255, 70]
+	  Port {
+	    PortNumber		    1
+	    Name		    "derCartPos"
+	    TestPoint		    off
+	    LinearAnalysisOutput    off
+	    LinearAnalysisInput	    off
+	    RTWStorageClass	    "Auto"
+	    DataLogging		    off
+	    DataLoggingNameMode	    "SignalName"
+	    DataLoggingDecimateData off
+	    DataLoggingDecimation   "2"
+	    DataLoggingLimitDataPoints off
+	    DataLoggingMaxPoints    "5000"
+	  }
+	}
+	Block {
+	  BlockType		  TransferFcn
+	  Name			  "Cart Velocity Filter"
+	  Position		  [325, 29, 420, 81]
+	  Numerator		  "[1e4]"
+	  Denominator		  "[1 70.7 1e4]"
+	  Port {
+	    PortNumber		    1
+	    Name		    "Cart Velocity"
+	    TestPoint		    off
+	    LinearAnalysisOutput    off
+	    LinearAnalysisInput	    off
+	    RTWStorageClass	    "Auto"
+	    DataLogging		    off
+	    DataLoggingNameMode	    "SignalName"
+	    DataLoggingDecimateData off
+	    DataLoggingDecimation   "2"
+	    DataLoggingLimitDataPoints off
+	    DataLoggingMaxPoints    "5000"
+	  }
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant1"
+	  Position		  [720, 194, 740, 216]
+	  Orientation		  "left"
+	  ShowName		  off
+	  Value			  "0"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant2"
+	  Position		  [720, 219, 740, 241]
+	  Orientation		  "left"
+	  ShowName		  off
+	  Value			  "0"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "Constant3"
+	  Position		  [720, 244, 740, 266]
+	  Orientation		  "left"
+	  ShowName		  off
+	  Value			  "0"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Controller"
+	  Ports			  [1, 1]
+	  Position		  [295, 251, 355, 359]
+	  Orientation		  "left"
+	  BackgroundColor	  "lightBlue"
+	  FontSize		  12
+	  FontWeight		  "bold"
+	  TreatAsAtomicUnit	  off
+	  System {
+	    Name		    "Controller"
+	    Location		    [25, 175, 923, 758]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    ZoomFactor		    "100"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "In1"
+	      Position		      [430, 35, 460, 50]
+	      Orientation	      "down"
+	    }
+	    Block {
+	      BlockType		      Constant
+	      Name		      "Control = 0"
+	      Position		      [565, 85, 585, 105]
+	      Orientation	      "left"
+	      NamePlacement	      "alternate"
+	      Value		      "0"
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Friction Compensation"
+	      Ports		      [1, 1]
+	      Position		      [615, 348, 710, 402]
+	      Orientation	      "left"
+	      DropShadow	      on
+	      NamePlacement	      "alternate"
+	      TreatAsAtomicUnit	      off
+	      MaskType		      "linear"
+	      MaskPromptString	      "Friction Compensation Magnitude in Nega"
+"tive Direction|Friction Compensation Magnitude in Positive Direction"
+	      MaskStyleString	      "edit,edit"
+	      MaskTunableValueString  "on,on"
+	      MaskCallbackString      "|"
+	      MaskEnableString	      "on,on"
+	      MaskVisibilityString    "on,on"
+	      MaskToolTipString	      "on,on"
+	      MaskVarAliasString      ","
+	      MaskVariables	      "frictionCompNeg=@1;frictionCompPos=@2;"
+	      MaskDisplay	      "plot(0,0,100,100,[40,30,20],[87,85,80],"
+"[46,54,54,46,46],[90,90,80,80,90],[46,45,45,46,54,55,55,54,46],[78,80,90,91,9"
+"1,90,80,78,78],[51,51,49,49],[78,10,10,78],[90,80,70,60],[70,80,85,88],[20,10"
+"],[80,70],[20,20,15],[73,80,80],[85,80,80],[80,80,74])"
+	      MaskIconFrame	      on
+	      MaskIconOpaque	      on
+	      MaskIconRotate	      "none"
+	      MaskIconUnits	      "autoscale"
+	      MaskValueString	      ".1|.1"
+	      System {
+		Name			"Friction Compensation"
+		Location		[198, 226, 810, 460]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "In1"
+		  Position		  [460, 41, 500, 79]
+		  Orientation		  "left"
+		}
+		Block {
+		  BlockType		  Switch
+		  Name			  "3"
+		  Position		  [110, 48, 125, 132]
+		  Orientation		  "left"
+		  DropShadow		  on
+		  ShowName		  off
+		}
+		Block {
+		  BlockType		  Fcn
+		  Name			  "Fcn4"
+		  Position		  [375, 50, 425, 70]
+		  Orientation		  "left"
+		  NamePlacement		  "alternate"
+		  ShowName		  off
+		  Expr			  "-u[3]"
+		}
+		Block {
+		  BlockType		  Gain
+		  Name			  "Gain2"
+		  Position		  [145, 44, 210, 76]
+		  Orientation		  "left"
+		  Gain			  "frictionCompPos"
+		}
+		Block {
+		  BlockType		  Gain
+		  Name			  "Gain3"
+		  Position		  [150, 104, 215, 136]
+		  Orientation		  "left"
+		  Gain			  "frictionCompNeg"
+		}
+		Block {
+		  BlockType		  Signum
+		  Name			  "Sign2"
+		  Tag			  "T"
+		  Position		  [325, 48, 355, 72]
+		  Orientation		  "left"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "Out1"
+		  Position		  [30, 68, 75, 112]
+		  Orientation		  "left"
+		  InitialOutput		  "0"
+		}
+		Line {
+		  SrcBlock		  "Fcn4"
+		  SrcPort		  1
+		  DstBlock		  "Sign2"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "In1"
+		  SrcPort		  1
+		  DstBlock		  "Fcn4"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Gain2"
+		  SrcPort		  1
+		  DstBlock		  "3"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Gain3"
+		  SrcPort		  1
+		  DstBlock		  "3"
+		  DstPort		  3
+		}
+		Line {
+		  SrcBlock		  "Sign2"
+		  SrcPort		  1
+		  Points		  [-5, 0]
+		  Branch {
+		    Points		    [0, 60]
+		    DstBlock		    "Gain3"
+		    DstPort		    1
+		  }
+		  Branch {
+		    Points		    [-40, 0]
+		    Branch {
+		    DstBlock		    "Gain2"
+		    DstPort		    1
+		    }
+		    Branch {
+		    Labels		    [2, 0]
+		    Points		    [0, 30]
+		    DstBlock		    "3"
+		    DstPort		    2
+		    }
+		  }
+		}
+		Line {
+		  SrcBlock		  "3"
+		  SrcPort		  1
+		  DstBlock		  "Out1"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Limit Guard"
+	      Ports		      [1, 1]
+	      Position		      [211, 85, 249, 135]
+	      Orientation	      "down"
+	      DropShadow	      on
+	      TreatAsAtomicUnit	      off
+	      MaskPromptString	      "maximal force"
+	      MaskStyleString	      "edit"
+	      MaskTunableValueString  "on"
+	      MaskEnableString	      "on"
+	      MaskVisibilityString    "on"
+	      MaskToolTipString	      "on"
+	      MaskVariables	      "umax2=@1;"
+	      MaskDisplay	      "plot(0,0,100,100,[20,40,40,20,20],[60,6"
+"0,49,49,60],[56,59,40],[58,55,55],[56,59],[52,55],[38,13,13],[39,39,46],[46,1"
+"3],[46,46],[23,23,24,22,24,24,22,23],[47,45,49,48,48,46,47,49],[36,35,34,34,3"
+"7,34,36,35,36,37,35,34,35],[49,48,46,49,48,47,45,47,48,46,46,47,49],[22,22,24"
+",24],[46,49,48,47])"
+	      MaskIconFrame	      on
+	      MaskIconOpaque	      on
+	      MaskIconRotate	      "none"
+	      MaskIconUnits	      "autoscale"
+	      MaskValueString	      ".5"
+	      System {
+		Name			"Limit Guard"
+		Location		[120, 219, 542, 323]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "In1"
+		  Position		  [15, 38, 45, 52]
+		}
+		Block {
+		  BlockType		  Fcn
+		  Name			  "Fcn"
+		  Position		  [95, 30, 155, 60]
+		  Expr			  "u[1]"
+		}
+		Block {
+		  BlockType		  Gain
+		  Name			  "Gain"
+		  Position		  [275, 29, 355, 61]
+		  Gain			  "umax2"
+		}
+		Block {
+		  BlockType		  Signum
+		  Name			  "Sign"
+		  Position		  [200, 29, 235, 61]
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "Out1"
+		  Position		  [380, 38, 410, 52]
+		  InitialOutput		  "0"
+		}
+		Line {
+		  SrcBlock		  "Sign"
+		  SrcPort		  1
+		  DstBlock		  "Gain"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Gain"
+		  SrcPort		  1
+		  DstBlock		  "Out1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Fcn"
+		  SrcPort		  1
+		  DstBlock		  "Sign"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "In1"
+		  SrcPort		  1
+		  DstBlock		  "Fcn"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Fcn
+	      Name		      "Limiter"
+	      Position		      [185, 190, 245, 230]
+	      Orientation	      "left"
+	      DropShadow	      on
+	      NamePlacement	      "alternate"
+	      Expr		      "abs(u[1])-limit"
+	      MaskPromptString	      "Rail mg - rail limit"
+	      MaskStyleString	      "edit"
+	      MaskTunableValueString  "on"
+	      MaskEnableString	      "on"
+	      MaskVisibilityString    "on"
+	      MaskToolTipString	      "on"
+	      MaskVariables	      "limit=@1;"
+	      MaskDisplay	      "plot(0,0,100,100,[10,90,90,10],[52,52,5"
+"0,50],[30,30],[52,60],[70,68,68,70,70],[60,60,52,52,60],[30,32,32,30],[52,52,"
+"60,60])"
+	      MaskIconFrame	      on
+	      MaskIconOpaque	      on
+	      MaskIconRotate	      "none"
+	      MaskIconUnits	      "autoscale"
+	      MaskValueString	      "0.3"
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Linear cart controller"
+	      Ports		      [1, 1]
+	      Position		      [620, 438, 715, 492]
+	      Orientation	      "left"
+	      DropShadow	      on
+	      NamePlacement	      "alternate"
+	      TreatAsAtomicUnit	      off
+	      MaskType		      "linear"
+	      MaskPromptString	      " K1  - position  feedback| K3  -  veloc"
+"ity  feedback"
+	      MaskStyleString	      "edit,edit"
+	      MaskTunableValueString  "on,on"
+	      MaskCallbackString      "|"
+	      MaskEnableString	      "on,on"
+	      MaskVisibilityString    "on,on"
+	      MaskToolTipString	      "on,on"
+	      MaskVarAliasString      ","
+	      MaskVariables	      "K1=@1;K3=@2;"
+	      MaskDisplay	      "plot(0,0,100,100,[40,30,20],[87,85,80],"
+"[46,54,54,46,46],[90,90,80,80,90],[46,45,45,46,54,55,55,54,46],[78,80,90,91,9"
+"1,90,80,78,78],[51,51,49,49],[78,10,10,78],[90,80,70,60],[70,80,85,88],[20,10"
+"],[80,70],[20,20,15],[73,80,80],[85,80,80],[80,80,74])"
+	      MaskIconFrame	      on
+	      MaskIconOpaque	      on
+	      MaskIconRotate	      "none"
+	      MaskIconUnits	      "autoscale"
+	      MaskValueString	      "-7|-4"
+	      System {
+		Name			"Linear cart controller"
+		Location		[205, 142, 798, 553]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "In1"
+		  Position		  [465, 71, 505, 109]
+		  Orientation		  "left"
+		}
+		Block {
+		  BlockType		  Fcn
+		  Name			  "Fcn1"
+		  Position		  [275, 80, 330, 100]
+		  Orientation		  "left"
+		  NamePlacement		  "alternate"
+		  ShowName		  off
+		  Expr			  "K1*u[1]"
+		}
+		Block {
+		  BlockType		  Fcn
+		  Name			  "Fcn2"
+		  Position		  [275, 115, 325, 135]
+		  Orientation		  "left"
+		  NamePlacement		  "alternate"
+		  ShowName		  off
+		  Expr			  "K3*u[3]"
+		}
+		Block {
+		  BlockType		  Sum
+		  Name			  "Sum"
+		  Ports			  [2, 1]
+		  Position		  [150, 70, 170, 145]
+		  Orientation		  "left"
+		  NamePlacement		  "alternate"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "Out1"
+		  Position		  [50, 88, 95, 132]
+		  Orientation		  "left"
+		  InitialOutput		  "0"
+		}
+		Line {
+		  SrcBlock		  "Fcn1"
+		  SrcPort		  1
+		  DstBlock		  "Sum"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Fcn2"
+		  SrcPort		  1
+		  DstBlock		  "Sum"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Sum"
+		  SrcPort		  1
+		  DstBlock		  "Out1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "In1"
+		  SrcPort		  1
+		  Points		  [-35, 0; 0, 0]
+		  Branch {
+		    DstBlock		    "Fcn1"
+		    DstPort		    1
+		  }
+		  Branch {
+		    Points		    [0, 35]
+		    DstBlock		    "Fcn2"
+		    DstPort		    1
+		  }
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Linear pendulum controller"
+	      Ports		      [1, 1]
+	      Position		      [615, 268, 710, 322]
+	      Orientation	      "left"
+	      DropShadow	      on
+	      NamePlacement	      "alternate"
+	      TreatAsAtomicUnit	      off
+	      MaskType		      "linear"
+	      MaskPromptString	      " K2  - angle  feedback| K4  - angular v"
+"elocity  feedback"
+	      MaskStyleString	      "edit,edit"
+	      MaskTunableValueString  "on,on"
+	      MaskCallbackString      "|"
+	      MaskEnableString	      "on,on"
+	      MaskVisibilityString    "on,on"
+	      MaskToolTipString	      "on,on"
+	      MaskVarAliasString      ","
+	      MaskVariables	      "K2=@1;K4=@2;"
+	      MaskDisplay	      "plot(0,0,100,100,[40,30,20],[87,85,80],"
+"[46,54,54,46,46],[90,90,80,80,90],[46,45,45,46,54,55,55,54,46],[78,80,90,91,9"
+"1,90,80,78,78],[51,51,49,49],[78,10,10,78],[90,80,70,60],[70,80,85,88],[20,10"
+"],[80,70],[20,20,15],[73,80,80],[85,80,80],[80,80,74])"
+	      MaskIconFrame	      on
+	      MaskIconOpaque	      on
+	      MaskIconRotate	      "none"
+	      MaskIconUnits	      "autoscale"
+	      MaskValueString	      "50|3.5"
+	      System {
+		Name			"Linear pendulum controller"
+		Location		[0, 28, 533, 238]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "In1"
+		  Position		  [415, 31, 455, 69]
+		  Orientation		  "left"
+		}
+		Block {
+		  BlockType		  Fcn
+		  Name			  "Fcn2"
+		  Position		  [185, 75, 320, 95]
+		  Orientation		  "left"
+		  NamePlacement		  "alternate"
+		  ShowName		  off
+		  Expr			  "K4*u[4]"
+		}
+		Block {
+		  BlockType		  Fcn
+		  Name			  "Fcn3"
+		  Position		  [185, 40, 320, 60]
+		  Orientation		  "left"
+		  NamePlacement		  "alternate"
+		  ShowName		  off
+		  Expr			  "K2*atan2(sin(u[2]),cos(u[2]))"
+		}
+		Block {
+		  BlockType		  Sum
+		  Name			  "Sum"
+		  Ports			  [2, 1]
+		  Position		  [85, 30, 105, 105]
+		  Orientation		  "left"
+		  NamePlacement		  "alternate"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "Out1"
+		  Position		  [25, 50, 65, 90]
+		  Orientation		  "left"
+		  InitialOutput		  "0"
+		}
+		Line {
+		  SrcBlock		  "Sum"
+		  SrcPort		  1
+		  DstBlock		  "Out1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Fcn2"
+		  SrcPort		  1
+		  DstBlock		  "Sum"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "In1"
+		  SrcPort		  1
+		  Points		  [-20, 0]
+		  Branch {
+		    Points		    [-5, 0; 0, 35]
+		    DstBlock		    "Fcn2"
+		    DstPort		    1
+		  }
+		  Branch {
+		    DstBlock		    "Fcn3"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  SrcBlock		  "Fcn3"
+		  SrcPort		  1
+		  DstBlock		  "Sum"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Scope
+	      Name		      "Scope"
+	      Ports		      [4]
+	      Position		      [390, 457, 450, 558]
+	      Location		      [190, 97, 860, 905]
+	      Open		      off
+	      NumInputPorts	      "4"
+	      List {
+		ListType		AxesTitles
+		axes1			"%<SignalLabel>"
+		axes2			"%<SignalLabel>"
+		axes3			"%<SignalLabel>"
+		axes4			"%<SignalLabel>"
+	      }
+	      YMin		      "-5~-5~-5~-5"
+	      YMax		      "5~5~5~5"
+	      DataFormat	      "StructureWithTime"
+	      LimitDataPoints	      off
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Soft landing arbiter"
+	      Ports		      [1, 1]
+	      Position		      [620, 106, 675, 144]
+	      Orientation	      "left"
+	      DropShadow	      on
+	      NamePlacement	      "alternate"
+	      ShowPortLabels	      off
+	      TreatAsAtomicUnit	      off
+	      MaskType		      "Soft landing"
+	      MaskDescription	      "Soft landing"
+	      MaskPromptString	      "k coefficient|R value"
+	      MaskStyleString	      "edit,edit"
+	      MaskTunableValueString  "on,on"
+	      MaskCallbackString      "|"
+	      MaskEnableString	      "on,on"
+	      MaskVisibilityString    "on,on"
+	      MaskToolTipString	      "on,on"
+	      MaskVarAliasString      ","
+	      MaskVariables	      "k=@1;R=@2;"
+	      MaskDisplay	      "plot(0,0,100,100,[14,20,20,14,14],[20,2"
+"0,8,8,20],[40,35,35,40,40],[39,40,51,51,40],[60,55,55,56,60,60],[70,70,60,60,"
+"60,71],[74,74,80,80,74],[80,91,91,80,80])"
+	      MaskIconFrame	      on
+	      MaskIconOpaque	      on
+	      MaskIconRotate	      "none"
+	      MaskIconUnits	      "autoscale"
+	      MaskValueString	      "8.6|0.35"
+	      System {
+		Name			"Soft landing arbiter"
+		Location		[89, 8, 597, 263]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "(x1,x2,x3,x4)"
+		  Position		  [55, 55, 75, 75]
+		  Orientation		  "down"
+		}
+		Block {
+		  BlockType		  Gain
+		  Name			  "Gain"
+		  Position		  [290, 134, 370, 186]
+		  ShowName		  off
+		  Gain			  "9.81*k*R"
+		}
+		Block {
+		  BlockType		  Fcn
+		  Name			  "kinetic"
+		  Position		  [185, 85, 270, 105]
+		  ShowName		  off
+		  Expr			  "u[4]*u[4]*0.5"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "one\n"
+		  Position		  [175, 162, 205, 188]
+		  ShowName		  off
+		}
+		Block {
+		  BlockType		  Fcn
+		  Name			  "potential"
+		  Position		  [100, 135, 150, 155]
+		  NamePlacement		  "alternate"
+		  ShowName		  off
+		  Expr			  "cos(u[2])"
+		}
+		Block {
+		  BlockType		  Sum
+		  Name			  "s2"
+		  Ports			  [2, 1]
+		  Position		  [400, 80, 420, 140]
+		  ShowName		  off
+		}
+		Block {
+		  BlockType		  Sum
+		  Name			  "s3"
+		  Ports			  [2, 1]
+		  Position		  [230, 130, 250, 190]
+		  ShowName		  off
+		  Inputs		  "+-"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "S5"
+		  Position		  [455, 100, 475, 120]
+		  ShowName		  off
+		  InitialOutput		  "0"
+		}
+		Line {
+		  SrcBlock		  "potential"
+		  SrcPort		  1
+		  DstBlock		  "s3"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "one\n"
+		  SrcPort		  1
+		  DstBlock		  "s3"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "kinetic"
+		  SrcPort		  1
+		  DstBlock		  "s2"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "s3"
+		  SrcPort		  1
+		  DstBlock		  "Gain"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Gain"
+		  SrcPort		  1
+		  Points		  [10, 0]
+		  DstBlock		  "s2"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "(x1,x2,x3,x4)"
+		  SrcPort		  1
+		  Points		  [0, 15]
+		  Branch {
+		    Points		    [0, 50]
+		    DstBlock		    "potential"
+		    DstPort		    1
+		  }
+		  Branch {
+		    DstBlock		    "kinetic"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  SrcBlock		  "s2"
+		  SrcPort		  1
+		  DstBlock		  "S5"
+		  DstPort		  1
+		}
+		Annotation {
+		  Name			  "OUTPUT"
+		  Position		  [465, 122]
+		  VerticalAlignment	  "top"
+		}
+		Annotation {
+		  Name			  "OUTPUT"
+		  Position		  [723, 47]
+		  VerticalAlignment	  "top"
+		}
+		Annotation {
+		  Name			  "INPUT"
+		  Position		  [70, 32]
+		  VerticalAlignment	  "top"
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Sum
+	      Name		      "Sum2"
+	      Ports		      [3, 1]
+	      Position		      [380, 328, 425, 422]
+	      Orientation	      "left"
+	      ShowName		      off
+	      Inputs		      "+++"
+	    }
+	    Block {
+	      BlockType		      SubSystem
+	      Name		      "Swinging & centring\n controller"
+	      Ports		      [1, 1]
+	      Position		      [740, 128, 835, 182]
+	      Orientation	      "left"
+	      DropShadow	      on
+	      NamePlacement	      "alternate"
+	      ShowPortLabels	      off
+	      TreatAsAtomicUnit	      off
+	      MaskType		      "swing"
+	      MaskDescription	      "swing"
+	      MaskPromptString	      "maximal control umax|ALPHA - centering "
+"cart factor related to position|BETA - centering cart factor related to veloc"
+"ity|GAMMA - centering cart factor related to + - pi/2 angle"
+	      MaskStyleString	      "edit,edit,edit,edit"
+	      MaskTunableValueString  "on,on,on,on"
+	      MaskCallbackString      "|||"
+	      MaskEnableString	      "on,on,on,on"
+	      MaskVisibilityString    "on,on,on,on"
+	      MaskToolTipString	      "on,on,on,on"
+	      MaskVarAliasString      ",,,"
+	      MaskVariables	      "umax=@1;alfa=@2;beta=@3;gamma=@4;"
+	      MaskDisplay	      "plot(0,0,100,100,[20,20],[12,87],[93,90"
+",90,93,7],[50,46,54,50,50],[20,22,18,20],[87,80,80,88],[80,80,75,75,71,71,65,"
+"65,60,60,49,49,40,40,20],[50,40,40,60,60,50,50,80,80,20,21,80,80,21,20])"
+	      MaskIconFrame	      on
+	      MaskIconOpaque	      on
+	      MaskIconRotate	      "none"
+	      MaskIconUnits	      "autoscale"
+	      MaskValueString	      "1|2.2|.4|0."
+	      System {
+		Name			"Swinging & centring\n controller"
+		Location		[53, 84, 746, 609]
+		Open			off
+		ModelBrowserVisibility	off
+		ModelBrowserWidth	200
+		ScreenColor		"white"
+		PaperOrientation	"landscape"
+		PaperPositionMode	"auto"
+		PaperType		"usletter"
+		PaperUnits		"inches"
+		ZoomFactor		"100"
+		Block {
+		  BlockType		  Inport
+		  Name			  "[X]"
+		  Position		  [590, 95, 610, 115]
+		  Orientation		  "left"
+		  DropShadow		  on
+		}
+		Block {
+		  BlockType		  Switch
+		  Name			  "6 "
+		  Position		  [555, 305, 580, 355]
+		  DropShadow		  on
+		  ShowName		  off
+		}
+		Block {
+		  BlockType		  Switch
+		  Name			  "6 1"
+		  Position		  [555, 375, 580, 425]
+		  DropShadow		  on
+		  ShowName		  off
+		}
+		Block {
+		  BlockType		  Switch
+		  Name			  "6 2"
+		  Position		  [70, 278, 100, 332]
+		  DropShadow		  on
+		  ShowName		  off
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "7"
+		  Position		  [500, 355, 530, 375]
+		  NamePlacement		  "alternate"
+		  ShowName		  off
+		  Value			  "0"
+		}
+		Block {
+		  BlockType		  Constant
+		  Name			  "9"
+		  Position		  [505, 415, 535, 435]
+		  NamePlacement		  "alternate"
+		  ShowName		  off
+		  Value			  "0"
+		}
+		Block {
+		  BlockType		  Demux
+		  Name			  "Demux1"
+		  Ports			  [1, 4]
+		  Position		  [310, 48, 315, 162]
+		  Orientation		  "left"
+		  BackgroundColor	  "black"
+		  NamePlacement		  "alternate"
+		  ShowName		  off
+		}
+		Block {
+		  BlockType		  Fcn
+		  Name			  "Fcn1"
+		  Position		  [165, 80, 295, 100]
+		  Orientation		  "left"
+		  NamePlacement		  "alternate"
+		  ShowName		  off
+		  Expr			  "atan2(sin(u[1]),cos(u[1]))"
+		}
+		Block {
+		  BlockType		  Saturate
+		  Name			  "Saturation"
+		  Position		  [50, 420, 80, 450]
+		  Orientation		  "left"
+		  NamePlacement		  "alternate"
+		  UpperLimit		  "umax"
+		  LowerLimit		  "-umax"
+		}
+		Block {
+		  BlockType		  Fcn
+		  Name			  "abs(x1)"
+		  Position		  [492, 150, 558, 180]
+		  Orientation		  "down"
+		  ShowName		  off
+		  Expr			  "abs(u[1])"
+		}
+		Block {
+		  BlockType		  Fcn
+		  Name			  "abs(x1)1"
+		  Position		  [190, 220, 290, 240]
+		  Orientation		  "down"
+		  ShowName		  off
+		  Expr			  "u[4]*(abs(u[2])-pi/2)"
+		}
+		Block {
+		  BlockType		  Fcn
+		  Name			  "abs(x1)2"
+		  Position		  [307, 200, 373, 230]
+		  Orientation		  "down"
+		  ShowName		  off
+		  Expr			  "u[3]*u[3]"
+		}
+		Block {
+		  BlockType		  Fcn
+		  Name			  "abs(x1)3"
+		  Position		  [355, 50, 485, 80]
+		  Orientation		  "up"
+		  NamePlacement		  "alternate"
+		  ShowName		  off
+		  Expr			  "gamma - abs(abs(u[2])-pi/2)"
+		}
+		Block {
+		  BlockType		  Gain
+		  Name			  "alfa"
+		  Position		  [493, 210, 557, 240]
+		  Orientation		  "down"
+		  ShowName		  off
+		  Gain			  "alfa"
+		}
+		Block {
+		  BlockType		  Gain
+		  Name			  "alfa1"
+		  Position		  [310, 250, 370, 280]
+		  Orientation		  "down"
+		  ShowName		  off
+		  Gain			  "beta"
+		}
+		Block {
+		  BlockType		  Product
+		  Name			  "kucosx3"
+		  Ports			  [2, 1]
+		  Position		  [160, 425, 195, 445]
+		  Orientation		  "left"
+		  ShowName		  off
+		}
+		Block {
+		  BlockType		  Product
+		  Name			  "kucosx4"
+		  Ports			  [2, 1]
+		  Position		  [165, 475, 200, 495]
+		  Orientation		  "left"
+		  ShowName		  off
+		}
+		Block {
+		  BlockType		  Mux
+		  Name			  "mux"
+		  Ports			  [4, 1]
+		  Position		  [145, 47, 150, 163]
+		  Orientation		  "left"
+		  BackgroundColor	  "black"
+		  ShowName		  off
+		}
+		Block {
+		  BlockType		  Product
+		  Name			  "oo"
+		  Ports			  [2, 1]
+		  Position		  [470, 320, 505, 340]
+		  ShowName		  off
+		}
+		Block {
+		  BlockType		  Product
+		  Name			  "oo1"
+		  Ports			  [2, 1]
+		  Position		  [465, 390, 500, 410]
+		  ShowName		  off
+		}
+		Block {
+		  BlockType		  Relay
+		  Name			  "swing"
+		  Position		  [208, 275, 272, 305]
+		  Orientation		  "down"
+		  ShowName		  off
+		  OffOutputValue	  "-1"
+		}
+		Block {
+		  BlockType		  Relay
+		  Name			  "swing1"
+		  Position		  [35, 200, 75, 240]
+		  Orientation		  "down"
+		  ShowName		  off
+		  OffOutputValue	  "-1"
+		}
+		Block {
+		  BlockType		  Gain
+		  Name			  "umax"
+		  Position		  [155, 357, 220, 413]
+		  Orientation		  "left"
+		  ShowName		  off
+		  Gain			  "umax"
+		}
+		Block {
+		  BlockType		  Fcn
+		  Name			  "x1 "
+		  Position		  [426, 150, 474, 180]
+		  Orientation		  "down"
+		  ShowName		  off
+		  Expr			  "-u[1]"
+		}
+		Block {
+		  BlockType		  Fcn
+		  Name			  "x1 1"
+		  Position		  [361, 150, 409, 180]
+		  Orientation		  "down"
+		  ShowName		  off
+		  Expr			  "-u[3]"
+		}
+		Block {
+		  BlockType		  Fcn
+		  Name			  "x1 2"
+		  Position		  [36, 125, 74, 160]
+		  Orientation		  "down"
+		  ShowName		  off
+		  Expr			  "u[1]"
+		}
+		Block {
+		  BlockType		  Sum
+		  Name			  "x1_penalty"
+		  Ports			  [3, 1]
+		  Position		  [105, 359, 125, 511]
+		  Orientation		  "left"
+		  NamePlacement		  "alternate"
+		  Inputs		  "+--"
+		}
+		Block {
+		  BlockType		  Outport
+		  Name			  "S4"
+		  Position		  [130, 295, 150, 315]
+		  DropShadow		  on
+		  NamePlacement		  "alternate"
+		  ShowName		  off
+		  InitialOutput		  "0"
+		}
+		Line {
+		  SrcBlock		  "abs(x1)3"
+		  SrcPort		  1
+		  Points		  [0, -10; -395, 0; 0, 270]
+		  DstBlock		  "6 2"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Demux1"
+		  SrcPort		  4
+		  DstBlock		  "mux"
+		  DstPort		  4
+		}
+		Line {
+		  SrcBlock		  "Demux1"
+		  SrcPort		  3
+		  DstBlock		  "mux"
+		  DstPort		  3
+		}
+		Line {
+		  SrcBlock		  "Demux1"
+		  SrcPort		  1
+		  DstBlock		  "mux"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Fcn1"
+		  SrcPort		  1
+		  DstBlock		  "mux"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "Demux1"
+		  SrcPort		  2
+		  DstBlock		  "Fcn1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "x1_penalty"
+		  SrcPort		  1
+		  DstBlock		  "Saturation"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "umax"
+		  SrcPort		  1
+		  DstBlock		  "x1_penalty"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "kucosx3"
+		  SrcPort		  1
+		  DstBlock		  "x1_penalty"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "oo"
+		  SrcPort		  1
+		  DstBlock		  "6 "
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "6 "
+		  SrcPort		  1
+		  Points		  [10, 0; 0, 110]
+		  DstBlock		  "kucosx3"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "abs(x1)"
+		  SrcPort		  1
+		  DstBlock		  "alfa"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "abs(x1)1"
+		  SrcPort		  1
+		  DstBlock		  "swing"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "[X]"
+		  SrcPort		  1
+		  Points		  [-60, 0]
+		  Branch {
+		    Points		    [-75, 0]
+		    Branch {
+		    DstBlock		    "x1 "
+		    DstPort		    1
+		    }
+		    Branch {
+		    Points		    [-30, 0]
+		    Branch {
+		    Points		    [-35, 0]
+		    Branch {
+		    DstBlock		    "x1 1"
+		    DstPort		    1
+		    }
+		    Branch {
+		    Points		    [-45, 0]
+		    Branch {
+		    DstBlock		    "Demux1"
+		    DstPort		    1
+		    }
+		    Branch {
+		    DstBlock		    "abs(x1)2"
+		    DstPort		    1
+		    }
+		    }
+		    }
+		    Branch {
+		    DstBlock		    "abs(x1)3"
+		    DstPort		    1
+		    }
+		    }
+		  }
+		  Branch {
+		    DstBlock		    "abs(x1)"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  SrcBlock		  "swing"
+		  SrcPort		  1
+		  Points		  [0, 25]
+		  Branch {
+		    Points		    [0, 50]
+		    Branch {
+		    DstBlock		    "umax"
+		    DstPort		    1
+		    }
+		    Branch {
+		    Points		    [0, 20]
+		    Branch {
+		    DstBlock		    "oo1"
+		    DstPort		    2
+		    }
+		    Branch {
+		    Points		    [0, 25]
+		    Branch {
+		    DstBlock		    "kucosx3"
+		    DstPort		    1
+		    }
+		    Branch {
+		    Points		    [0, 50]
+		    DstBlock		    "kucosx4"
+		    DstPort		    1
+		    }
+		    }
+		    }
+		  }
+		  Branch {
+		    DstBlock		    "oo"
+		    DstPort		    2
+		  }
+		}
+		Line {
+		  SrcBlock		  "alfa"
+		  SrcPort		  1
+		  Points		  [0, 70]
+		  DstBlock		  "6 "
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "x1 "
+		  SrcPort		  1
+		  Points		  [0, 140]
+		  DstBlock		  "oo"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "oo1"
+		  SrcPort		  1
+		  DstBlock		  "6 1"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "alfa1"
+		  SrcPort		  1
+		  Points		  [0, 100]
+		  DstBlock		  "6 1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "x1 1"
+		  SrcPort		  1
+		  Points		  [0, 210]
+		  DstBlock		  "oo1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "abs(x1)2"
+		  SrcPort		  1
+		  DstBlock		  "alfa1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "kucosx4"
+		  SrcPort		  1
+		  DstBlock		  "x1_penalty"
+		  DstPort		  3
+		}
+		Line {
+		  SrcBlock		  "6 1"
+		  SrcPort		  1
+		  Points		  [30, 0; 0, 90]
+		  DstBlock		  "kucosx4"
+		  DstPort		  2
+		}
+		Line {
+		  SrcBlock		  "7"
+		  SrcPort		  1
+		  Points		  [5, 0]
+		  DstBlock		  "6 "
+		  DstPort		  3
+		}
+		Line {
+		  SrcBlock		  "9"
+		  SrcPort		  1
+		  DstBlock		  "6 1"
+		  DstPort		  3
+		}
+		Line {
+		  SrcBlock		  "6 2"
+		  SrcPort		  1
+		  DstBlock		  "S4"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "Saturation"
+		  SrcPort		  1
+		  Points		  [-20, 0; 0, -110]
+		  DstBlock		  "6 2"
+		  DstPort		  3
+		}
+		Line {
+		  SrcBlock		  "x1 2"
+		  SrcPort		  1
+		  DstBlock		  "swing1"
+		  DstPort		  1
+		}
+		Line {
+		  SrcBlock		  "mux"
+		  SrcPort		  1
+		  Points		  [-25, 0]
+		  Branch {
+		    Points		    [0, 90; 125, 0]
+		    DstBlock		    "abs(x1)1"
+		    DstPort		    1
+		  }
+		  Branch {
+		    Points		    [-60, 0]
+		    DstBlock		    "x1 2"
+		    DstPort		    1
+		  }
+		}
+		Line {
+		  SrcBlock		  "swing1"
+		  SrcPort		  1
+		  DstBlock		  "6 2"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Block {
+	      BlockType		      Switch
+	      Name		      "Switch"
+	      Position		      [80, 118, 115, 302]
+	      Orientation	      "left"
+	      DropShadow	      on
+	    }
+	    Block {
+	      BlockType		      Switch
+	      Name		      "Switch1"
+	      Position		      [260, 226, 275, 314]
+	      Orientation	      "left"
+	      DropShadow	      on
+	    }
+	    Block {
+	      BlockType		      Switch
+	      Name		      "Switch2"
+	      Position		      [515, 81, 530, 169]
+	      Orientation	      "left"
+	      DropShadow	      on
+	    }
+	    Block {
+	      BlockType		      Fcn
+	      Name		      "Upper zone arbiter"
+	      Position		      [565, 178, 655, 232]
+	      Orientation	      "left"
+	      DropShadow	      on
+	      NamePlacement	      "alternate"
+	      Expr		      "abs(u[2])-cone"
+	      MaskType		      "ZONE"
+	      MaskDescription	      "ZONE"
+	      MaskPromptString	      "Stab.zone - width of stabilization zone"
+" [rad]"
+	      MaskStyleString	      "edit"
+	      MaskTunableValueString  "on"
+	      MaskEnableString	      "on"
+	      MaskVisibilityString    "on"
+	      MaskToolTipString	      "on"
+	      MaskVariables	      "cone=@1;"
+	      MaskDisplay	      "plot(0,0,100,100,[40,60,80,83,80,60,40,"
+"20,17,20,40],[89,89,80,70,60,51,51,60,69,80,90],[83,50,17],[70,8,68])"
+	      MaskIconFrame	      on
+	      MaskIconOpaque	      on
+	      MaskIconRotate	      "none"
+	      MaskIconUnits	      "autoscale"
+	      MaskValueString	      "0.3"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Out1"
+	      Position		      [25, 203, 55, 217]
+	      Orientation	      "left"
+	    }
+	    Line {
+	      SrcBlock		      "Swinging & centring\n controller"
+	      SrcPort		      1
+	      DstBlock		      "Switch2"
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "Soft landing arbiter"
+	      SrcPort		      1
+	      DstBlock		      "Switch2"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Limiter"
+	      SrcPort		      1
+	      DstBlock		      "Switch"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Control = 0"
+	      SrcPort		      1
+	      DstBlock		      "Switch2"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Linear pendulum controller"
+	      SrcPort		      1
+	      Points		      [-140, 0; 0, 50]
+	      DstBlock		      "Sum2"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Linear cart controller"
+	      SrcPort		      1
+	      Points		      [-150, 0; 0, -60]
+	      DstBlock		      "Sum2"
+	      DstPort		      3
+	    }
+	    Line {
+	      SrcBlock		      "Friction Compensation"
+	      SrcPort		      1
+	      DstBlock		      "Sum2"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "Switch2"
+	      SrcPort		      1
+	      Points		      [-105, 0; 0, 115; -90, 0]
+	      Branch {
+		DstBlock		"Switch1"
+		DstPort			1
+	      }
+	      Branch {
+		Points			[0, 230]
+		DstBlock		"Scope"
+		DstPort			1
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Sum2"
+	      SrcPort		      1
+	      Points		      [-41, 0; 0, -75; -39, 0]
+	      Branch {
+		DstBlock		"Switch1"
+		DstPort			3
+	      }
+	      Branch {
+		Points			[0, 195]
+		DstBlock		"Scope"
+		DstPort			2
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Upper zone arbiter"
+	      SrcPort		      1
+	      Points		      [-130, 0; 0, 65; -125, 0]
+	      Branch {
+		DstBlock		"Switch1"
+		DstPort			2
+	      }
+	      Branch {
+		Points			[0, 275]
+		DstBlock		"Scope"
+		DstPort			4
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Limit Guard"
+	      SrcPort		      1
+	      Points		      [0, 10]
+	      DstBlock		      "Switch"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Switch1"
+	      SrcPort		      1
+	      Points		      [0, 0; -30, 0]
+	      Branch {
+		Points			[0, 250]
+		DstBlock		"Scope"
+		DstPort			3
+	      }
+	      Branch {
+		DstBlock		"Switch"
+		DstPort			3
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "In1"
+	      SrcPort		      1
+	      Points		      [0, 0; 0, 15]
+	      Branch {
+		Points			[270, 0]
+		Branch {
+		  Points		  [0, 55]
+		  DstBlock		  "Soft landing arbiter"
+		  DstPort		  1
+		}
+		Branch {
+		  Points		  [155, 0; 0, 85]
+		  Branch {
+		    Points		    [0, 50]
+		    Branch {
+		    DstBlock		    "Upper zone arbiter"
+		    DstPort		    1
+		    }
+		    Branch {
+		    Points		    [0, 90]
+		    Branch {
+		    DstBlock		    "Linear pendulum controller"
+		    DstPort		    1
+		    }
+		    Branch {
+		    Points		    [0, 80]
+		    Branch {
+		    Labels		    [2, 0]
+		    Points		    [0, 90]
+		    DstBlock		    "Linear cart controller"
+		    DstPort		    1
+		    }
+		    Branch {
+		    Labels		    [1, 0]
+		    DstBlock		    "Friction Compensation"
+		    DstPort		    1
+		    }
+		    }
+		    }
+		  }
+		  Branch {
+		    DstBlock		    "Swinging & centring\n controller"
+		    DstPort		    1
+		  }
+		}
+	      }
+	      Branch {
+		Points			[-80, 0]
+		Branch {
+		  Points		  [0, 140]
+		  DstBlock		  "Limiter"
+		  DstPort		  1
+		}
+		Branch {
+		  DstBlock		  "Limit Guard"
+		  DstPort		  1
+		}
+	      }
+	    }
+	    Line {
+	      SrcBlock		      "Switch"
+	      SrcPort		      1
+	      DstBlock		      "Out1"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux2"
+	  Ports			  [4, 1]
+	  Position		  [690, 168, 695, 267]
+	  Orientation		  "left"
+	  ShowName		  off
+	  DisplayOption		  "bar"
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux3"
+	  Ports			  [4, 1]
+	  Position		  [548, 200, 622, 205]
+	  Orientation		  "down"
+	  BackgroundColor	  "black"
+	  ShowName		  off
+	}
+	Block {
+	  BlockType		  Derivative
+	  Name			  "Pendulum Velocity"
+	  Position		  [235, 140, 265, 170]
+	  Port {
+	    PortNumber		    1
+	    Name		    "derPendPos "
+	    TestPoint		    off
+	    LinearAnalysisOutput    off
+	    LinearAnalysisInput	    off
+	    RTWStorageClass	    "Auto"
+	    DataLogging		    off
+	    DataLoggingNameMode	    "SignalName"
+	    DataLoggingDecimateData off
+	    DataLoggingDecimation   "2"
+	    DataLoggingLimitDataPoints off
+	    DataLoggingMaxPoints    "5000"
+	  }
+	}
+	Block {
+	  BlockType		  TransferFcn
+	  Name			  "Pendulum Velocity  Filter"
+	  Position		  [330, 129, 425, 181]
+	  Numerator		  "[1e4]"
+	  Denominator		  "[1 70.7 1e4]"
+	  Port {
+	    PortNumber		    1
+	    Name		    "Pendulum Velocity"
+	    TestPoint		    off
+	    LinearAnalysisOutput    off
+	    LinearAnalysisInput	    off
+	    RTWStorageClass	    "Auto"
+	    DataLogging		    off
+	    DataLoggingNameMode	    "SignalName"
+	    DataLoggingDecimateData off
+	    DataLoggingDecimation   "2"
+	    DataLoggingLimitDataPoints off
+	    DataLoggingMaxPoints    "5000"
+	  }
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum1"
+	  Ports			  [2, 1]
+	  Position		  [545, 220, 565, 260]
+	  Orientation		  "left"
+	  ShowName		  off
+	  Inputs		  "-+"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Out1"
+	  Position		  [635, 48, 665, 62]
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Out2"
+	  Position		  [645, 148, 675, 162]
+	  Port			  "2"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Out3"
+	  Position		  [100, 298, 130, 312]
+	  Orientation		  "left"
+	  Port			  "3"
+	}
+	Line {
+	  Name			  "derCartPos"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Cart Velocity"
+	  SrcPort		  1
+	  DstBlock		  "Cart Velocity Filter"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "derPendPos "
+	  Labels		  [0, 0]
+	  SrcBlock		  "Pendulum Velocity"
+	  SrcPort		  1
+	  DstBlock		  "Pendulum Velocity  Filter"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "Cart Velocity"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Cart Velocity Filter"
+	  SrcPort		  1
+	  Points		  [0, 0; 170, 0]
+	  Branch {
+	    DstBlock		    "Mux3"
+	    DstPort		    3
+	  }
+	  Branch {
+	    DstBlock		    "Out1"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  Name			  "Pendulum Velocity"
+	  Labels		  [0, 1]
+	  SrcBlock		  "Pendulum Velocity  Filter"
+	  SrcPort		  1
+	  Points		  [0, 0; 185, 0]
+	  Branch {
+	    DstBlock		    "Mux3"
+	    DstPort		    4
+	  }
+	  Branch {
+	    DstBlock		    "Out2"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Mux2"
+	  SrcPort		  1
+	  Points		  [-45, 0; 0, 30]
+	  DstBlock		  "Sum1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Constant1"
+	  SrcPort		  1
+	  DstBlock		  "Mux2"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Constant2"
+	  SrcPort		  1
+	  DstBlock		  "Mux2"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Constant3"
+	  SrcPort		  1
+	  DstBlock		  "Mux2"
+	  DstPort		  4
+	}
+	Line {
+	  SrcBlock		  "Mux3"
+	  SrcPort		  1
+	  Points		  [0, 20]
+	  DstBlock		  "Sum1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "In1"
+	  SrcPort		  1
+	  Points		  [40, 0; 15, 0]
+	  Branch {
+	    DstBlock		    "Cart Velocity"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, 40; 370, 0]
+	    DstBlock		    "Mux3"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "In2"
+	  SrcPort		  1
+	  Points		  [0, 0; 15, 0]
+	  Branch {
+	    DstBlock		    "Pendulum Velocity"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Labels		    [2, 0]
+	    Points		    [0, -40; 430, 0]
+	    DstBlock		    "Mux3"
+	    DstPort		    2
+	  }
+	}
+	Line {
+	  SrcBlock		  "In3"
+	  SrcPort		  1
+	  DstBlock		  "Mux2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Controller"
+	  SrcPort		  1
+	  DstBlock		  "Out3"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Sum1"
+	  SrcPort		  1
+	  Points		  [-50, 0; 0, 65]
+	  DstBlock		  "Controller"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "Counts->Meters"
+      Position		      [250, 95, 280, 125]
+      Gain		      ".156/2048"
+      Port {
+	PortNumber		1
+	Name			"Cart Position"
+	TestPoint		off
+	LinearAnalysisOutput	off
+	LinearAnalysisInput	off
+	RTWStorageClass		"Auto"
+	DataLogging		off
+	DataLoggingNameMode	"SignalName"
+	DataLoggingDecimateData	off
+	DataLoggingDecimation	"2"
+	DataLoggingLimitDataPoints off
+	DataLoggingMaxPoints	"5000"
+      }
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "Counts->Radians"
+      Position		      [250, 230, 280, 260]
+      Gain		      "-2*pi/2048"
+      Port {
+	PortNumber		1
+	Name			"Pendulum Position"
+	TestPoint		off
+	LinearAnalysisOutput	off
+	LinearAnalysisInput	off
+	RTWStorageClass		"Auto"
+	DataLogging		off
+	DataLoggingNameMode	"SignalName"
+	DataLoggingDecimateData	off
+	DataLoggingDecimation	"2"
+	DataLoggingLimitDataPoints off
+	DataLoggingMaxPoints	"5000"
+      }
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Digital To Analog\nConverter"
+      Ports		      [1]
+      Position		      [790, 327, 890, 403]
+      BackgroundColor	      "green"
+      DropShadow	      on
+      NamePlacement	      "alternate"
+      SourceBlock	      "pci1711/Advantech \nPCI1711 I//O Board Lib/Feed"
+"back DAC"
+      SourceType	      "DAC Unit for Feedback Experiments"
+      channel		      "0"
+      range		      "0"
+      tsamp		      "0.001"
+      hwAccess		      on
+    }
+    Block {
+      BlockType		      Mux
+      Name		      "Mux1"
+      Ports		      [2, 1]
+      Position		      [540, 39, 545, 81]
+      BackgroundColor	      "black"
+      ShowName		      off
+      Inputs		      "2"
+      Port {
+	PortNumber		1
+	Name			"Actual and Desired Cart Positioons"
+	PropagatedSignals	"Cart Position, Desired Position"
+	TestPoint		off
+	LinearAnalysisOutput	off
+	LinearAnalysisInput	off
+	RTWStorageClass		"Auto"
+	DataLogging		off
+	DataLoggingNameMode	"SignalName"
+	DataLoggingDecimateData	off
+	DataLoggingDecimation	"2"
+	DataLoggingLimitDataPoints off
+	DataLoggingMaxPoints	"5000"
+      }
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Read Cart Encoder1"
+      Ports		      [0, 1]
+      Position		      [70, 74, 185, 146]
+      BackgroundColor	      "green"
+      DropShadow	      on
+      SourceBlock	      "pci1711/Advantech \nPCI1711 I//O Board Lib/Feed"
+"back Encoder "
+      SourceType	      "Feedback Encoder Block"
+      channel		      "0"
+      offset		      "0"
+      tsamp		      "0.001"
+      hwAccess		      on
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Read Pendulum Encoder"
+      Ports		      [0, 1]
+      Position		      [75, 209, 190, 281]
+      BackgroundColor	      "green"
+      DropShadow	      on
+      SourceBlock	      "pci1711/Advantech \nPCI1711 I//O Board Lib/Feed"
+"back Encoder "
+      SourceType	      "Feedback Encoder Block"
+      channel		      "1"
+      offset		      "-1024"
+      tsamp		      "0.001"
+      hwAccess		      on
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Scaling and Safety"
+      Ports		      [1, 1]
+      Position		      [670, 330, 740, 400]
+      BackgroundColor	      "red"
+      DropShadow	      on
+      NamePlacement	      "alternate"
+      TreatAsAtomicUnit	      off
+      System {
+	Name			"Scaling and Safety"
+	Location		[551, 383, 872, 529]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "In1"
+	  Position		  [15, 53, 45, 67]
+	}
+	Block {
+	  BlockType		  Saturate
+	  Name			  "Saturation"
+	  Position		  [140, 45, 170, 75]
+	  UpperLimit		  "2.5"
+	  LowerLimit		  "-2.5"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Scaling"
+	  Position		  [70, 45, 100, 75]
+	  Port {
+	    PortNumber		    1
+	    Name		    "actual LoadPosition"
+	    TestPoint		    off
+	    LinearAnalysisOutput    off
+	    LinearAnalysisInput	    off
+	    RTWStorageClass	    "Auto"
+	    DataLogging		    off
+	    DataLoggingNameMode	    "SignalName"
+	    DataLoggingDecimateData off
+	    DataLoggingDecimation   "2"
+	    DataLoggingLimitDataPoints off
+	    DataLoggingMaxPoints    "5000"
+	  }
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Out1"
+	  Position		  [210, 53, 240, 67]
+	}
+	Line {
+	  SrcBlock		  "Saturation"
+	  SrcPort		  1
+	  DstBlock		  "Out1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "In1"
+	  SrcPort		  1
+	  DstBlock		  "Scaling"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "actual LoadPosition"
+	  SrcBlock		  "Scaling"
+	  SrcPort		  1
+	  DstBlock		  "Saturation"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      SignalGenerator
+      Name		      "Signal\nGenerator"
+      Position		      [115, 350, 145, 380]
+      Amplitude		      "0.1"
+      Frequency		      "0.1"
+      Port {
+	PortNumber		1
+	Name			"Desired Position"
+	TestPoint		off
+	LinearAnalysisOutput	off
+	LinearAnalysisInput	off
+	RTWStorageClass		"Auto"
+	DataLogging		off
+	DataLoggingNameMode	"SignalName"
+	DataLoggingDecimateData	off
+	DataLoggingDecimation	"2"
+	DataLoggingLimitDataPoints off
+	DataLoggingMaxPoints	"5000"
+      }
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "System States"
+      Ports		      [4]
+      Position		      [805, 39, 885, 231]
+      BackgroundColor	      "magenta"
+      ExtModeUploadOption     "log"
+      FontWeight	      "bold"
+      Location		      [714, 52, 1023, 557]
+      Open		      on
+      NumInputPorts	      "4"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+	axes2			"%<SignalLabel>"
+	axes3			"%<SignalLabel>"
+	axes4			"%<SignalLabel>"
+      }
+      List {
+	ListType		SelectedSignals
+	axes1			""
+	axes2			""
+	axes3			""
+	axes4			""
+      }
+      TimeRange		      "70"
+      YMin		      "-0.5~-1~-6~-15"
+      YMax		      "0.5~1~6~15"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      off
+      Decimation	      "0.1"
+      SampleInput	      on
+      SampleTime	      "0.01"
+    }
+    Line {
+      Name		      "Cart Position"
+      Labels		      [0, 0]
+      SrcBlock		      "Counts->Meters"
+      SrcPort		      1
+      Points		      [70, 0]
+      Branch {
+	Points			[0, -60]
+	DstBlock		"Mux1"
+	DstPort			1
+      }
+      Branch {
+	Points			[70, 0; 0, 115]
+	DstBlock		"Control Subsystem"
+	DstPort			1
+      }
+    }
+    Line {
+      Name		      "Pendulum Position"
+      Labels		      [0, 0]
+      SrcBlock		      "Counts->Radians"
+      SrcPort		      1
+      Points		      [85, 0; 0, -85; 0, 0]
+      Branch {
+	Labels			[-1, 1]
+	DstBlock		"System States"
+	DstPort			3
+      }
+      Branch {
+	Points			[0, 135]
+	DstBlock		"Control Subsystem"
+	DstPort			2
+      }
+    }
+    Line {
+      SrcBlock		      "Scaling and Safety"
+      SrcPort		      1
+      DstBlock		      "Digital To Analog\nConverter"
+      DstPort		      1
+    }
+    Line {
+      Name		      "Desired Position"
+      Labels		      [1, 1]
+      SrcBlock		      "Signal\nGenerator"
+      SrcPort		      1
+      Points		      [255, 0]
+      Branch {
+	Labels			[-1, 0]
+	Points			[0, -295]
+	DstBlock		"Mux1"
+	DstPort			2
+      }
+      Branch {
+	DstBlock		"Control Subsystem"
+	DstPort			3
+      }
+    }
+    Line {
+      Name		      "Voltage"
+      Labels		      [0, 1]
+      SrcBlock		      "Control Subsystem"
+      SrcPort		      3
+      DstBlock		      "Scaling and Safety"
+      DstPort		      1
+    }
+    Line {
+      Name		      "Actual and Desired Cart Positioons"
+      Labels		      [-1, 1]
+      SrcBlock		      "Mux1"
+      SrcPort		      1
+      Points		      [250, 0]
+      DstBlock		      "System States"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Read Cart Encoder1"
+      SrcPort		      1
+      DstBlock		      "Counts->Meters"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Read Pendulum Encoder"
+      SrcPort		      1
+      DstBlock		      "Counts->Radians"
+      DstPort		      1
+    }
+    Line {
+      Name		      "Cart Velocity"
+      Labels		      [-1, 1]
+      SrcBlock		      "Control Subsystem"
+      SrcPort		      1
+      Points		      [95, 0; 0, -115]
+      DstBlock		      "System States"
+      DstPort		      2
+    }
+    Line {
+      Name		      "Pendulum Velocity"
+      Labels		      [-1, 1]
+      SrcBlock		      "Control Subsystem"
+      SrcPort		      2
+      Points		      [125, 0; 0, -85]
+      DstBlock		      "System States"
+      DstPort		      4
+    }
+    Annotation {
+      Name		      "Measure System States"
+      Position		      [172, 37]
+      FontName		      "times"
+      FontSize		      24
+      FontWeight	      "bold"
+    }
+    Annotation {
+      Name		      "Output Control"
+      Position		      [787, 452]
+      FontName		      "Times New Roman"
+      FontSize		      20
+      FontWeight	      "bold"
+    }
+  }
+}

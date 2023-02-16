@@ -1,0 +1,652 @@
+Library {
+  Name			  "MicaServo"
+  Version		  4.00
+  LibraryLinkDisplay	  "none"
+  CovSaveName		  "covdata"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  off
+  StatusBar		  off
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  Created		  "Mon Nov 12 00:51:04 2001"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "Administrator"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Sat Feb 02 15:20:39 2002"
+  ModelVersionFormat	  "1.%<AutoIncrement:15>"
+  ConfigurationManager	  "none"
+  SimParamPage		  "Solver"
+  AlgebraicLoopMsg	  "warning"
+  MinStepSizeMsg	  "warning"
+  UnconnectedInputMsg	  "warning"
+  UnconnectedOutputMsg	  "warning"
+  UnconnectedLineMsg	  "warning"
+  InheritedTsInSrcMsg	  "warning"
+  SingleTaskRateTransMsg  "none"
+  MultiTaskRateTransMsg	  "error"
+  IntegerOverflowMsg	  "warning"
+  CheckForMatrixSingularity "none"
+  UnnecessaryDatatypeConvMsg "none"
+  Int32ToFloatConvMsg	  "warning"
+  SignalLabelMismatchMsg  "none"
+  LinearizationMsg	  "none"
+  VectorMatrixConversionMsg "none"
+  SfunCompatibilityCheckMsg "none"
+  BlockPriorityViolationMsg "warning"
+  ArrayBoundsChecking	  "none"
+  ConsistencyChecking	  "none"
+  Profile		  off
+  SimulationMode	  "normal"
+  RTWRetainRTWFile	  off
+  RTWMakeCommand	  "make_rtw"
+  RTWGenerateCodeOnly	  off
+  TLCProfiler		  off
+  TLCDebug		  off
+  TLCCoverage		  off
+  ExtModeMexFile	  "ext_comm"
+  ExtModeBatchMode	  off
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeLogAll		  on
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  System {
+    Name		    "MicaServo"
+    Location		    [163, 408, 450, 555]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "automatic"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    ZoomFactor		    "100"
+    AutoZoom		    on
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      SubSystem
+      Name		      "Feedback Servo Trainer\nDigital Unit"
+      Ports		      []
+      Position		      [45, 27, 176, 101]
+      BackgroundColor	      "green"
+      ShowPortLabels	      on
+      TreatAsAtomicUnit	      off
+      RTWSystemCode	      "Auto"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      MaskType		      "Feedback Servo Trainer Digital Unit with Mica92"
+"6"
+      MaskDisplay	      "disp ('Feedback 33-003 \\n\\n Digital Servo Fun"
+"dementals \\n with MICA 926')"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      System {
+	Name			"Feedback Servo Trainer\nDigital Unit"
+	Location		[633, 389, 1193, 814]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"automatic"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	AutoZoom		on
+	Block {
+	  BlockType		  "S-Function"
+	  Name			  " Digital to Analog Converter"
+	  Ports			  [1]
+	  Position		  [250, 34, 375, 136]
+	  BackgroundColor	  "magenta"
+	  FunctionName		  "SMicaDac"
+	  Parameters		  "baseAddr,inType,stime,hwAccess"
+	  PortCounts		  "[]"
+	  SFunctionModules	  "''"
+	  MaskType		  " Digital to Analog Converter"
+	  MaskDescription	  "Analog Input Unit for Feedback DU154B \nDig"
+"ital Unit 33-003\nFeeback Instruments\nMICA 926 Edition"
+	  MaskHelp		  "Applies the corresponding voltage to the Se"
+"rvo Trainers DAC\noutput type can be selected to be either in RawData type or"
+" directly in volts"
+	  MaskPromptString	  "BaseAddress|Input Type|Sampling Time (sec.)"
+"|Access Hardware"
+	  MaskStyleString	  "edit,popup(RawData (-127 to +127)| Volt   ("
+"+/- 11V range)),edit,checkbox"
+	  MaskTunableValueString  "on,on,on,on"
+	  MaskCallbackString	  "|||"
+	  MaskEnableString	  "on,on,on,on"
+	  MaskVisibilityString	  "on,on,on,on"
+	  MaskToolTipString	  "on,on,on,on"
+	  MaskVariables		  "baseAddr=&1;inType=@2;stime=@3;hwAccess=@4;"
+	  MaskDisplay		  "disp('Feedback Servo Trainer\\n Digital Uni"
+"t 33-003\\n\\n DAC\\n Mica 926 Board ')"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "0x300|RawData (-127 to +127)|0.01|on"
+	  MaskVariableAliases	  ",,,"
+	}
+	Block {
+	  BlockType		  "S-Function"
+	  Name			  "Analog to Digital Converter"
+	  Ports			  [0, 1]
+	  Position		  [45, 29, 170, 131]
+	  BackgroundColor	  "magenta"
+	  FunctionName		  "SMicaAdc"
+	  Parameters		  "baseAddr,inType,stime,hwAccess"
+	  PortCounts		  "[]"
+	  SFunctionModules	  "''"
+	  MaskType		  "Analog to Digital Converter"
+	  MaskDescription	  "Analog Input Unit for Feedback DU154B \nDig"
+"ital Unit 33-003\nFeeback Instruments"
+	  MaskHelp		  "Reads and converts the voltage applied to A"
+"DC input on the Digital Unit.\nRead operation is done either in Rawdata (+/- "
+"127) format or directly in voltage format"
+	  MaskPromptString	  "BaseAddress|Input Type|Sampling Time (sec.)"
+"|Access Hardware"
+	  MaskStyleString	  "edit,popup(RawData (-127 to +127)| Volt   ("
+"+/- 11V range)),edit,checkbox"
+	  MaskTunableValueString  "on,on,on,on"
+	  MaskCallbackString	  "|||"
+	  MaskEnableString	  "on,on,on,on"
+	  MaskVisibilityString	  "on,on,on,on"
+	  MaskToolTipString	  "on,on,on,on"
+	  MaskVariables		  "baseAddr=&1;inType=@2;stime=@3;hwAccess=@4;"
+	  MaskDisplay		  "disp('Feedback Servo Trainer\\n Digital Uni"
+"t 33-003\\n\\n ADC\\n Mica 926 Board ')"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "0x300|RawData (-127 to +127)|0.01|on"
+	  MaskVariableAliases	  ",,,"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Input PortC for Mica"
+	  Ports			  [0, 4]
+	  Position		  [230, 273, 340, 387]
+	  BackgroundColor	  "yellow"
+	  ShowPortLabels	  on
+	  TreatAsAtomicUnit	  off
+	  RTWSystemCode		  "Auto"
+	  RTWFcnNameOpts	  "Auto"
+	  RTWFileNameOpts	  "Auto"
+	  MaskType		  "Read the Inputs from portC directly"
+	  MaskPromptString	  "BaseAddress|Sample Time (sec.)|Access Hardw"
+"are"
+	  MaskStyleString	  "edit,edit,checkbox"
+	  MaskTunableValueString  "on,on,on"
+	  MaskCallbackString	  "||"
+	  MaskEnableString	  "on,on,on"
+	  MaskVisibilityString	  "on,on,on"
+	  MaskToolTipString	  "on,on,on"
+	  MaskVariables		  "baseAddr=&1;stime=@2;hwAccess=@3;"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "0x300|0.01|on"
+	  MaskVariableAliases	  ",,"
+	  System {
+	    Name		    "Input PortC for Mica"
+	    Location		    [475, 487, 739, 706]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "automatic"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    ZoomFactor		    "100"
+	    AutoZoom		    on
+	    Block {
+	      BlockType		      "S-Function"
+	      Name		      "S-Function"
+	      Ports		      [0, 4]
+	      Position		      [25, 28, 130, 167]
+	      FunctionName	      "SMicaPortCLower"
+	      Parameters	      "baseAddr,stime,hwAccess"
+	      PortCounts	      "[]"
+	      SFunctionModules	      "''"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Sp1"
+	      Position		      [150, 38, 180, 52]
+	      Port		      "1"
+	      OutputWhenDisabled      "held"
+	      InitialOutput	      "[]"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Sp2"
+	      Position		      [150, 73, 180, 87]
+	      Port		      "2"
+	      OutputWhenDisabled      "held"
+	      InitialOutput	      "[]"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Index Pulse"
+	      Position		      [150, 108, 180, 122]
+	      Port		      "3"
+	      OutputWhenDisabled      "held"
+	      InitialOutput	      "[]"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "EFC\nfor ADC  "
+	      Position		      [150, 143, 180, 157]
+	      Port		      "4"
+	      OutputWhenDisabled      "held"
+	      InitialOutput	      "[]"
+	    }
+	    Line {
+	      SrcBlock		      "S-Function"
+	      SrcPort		      4
+	      DstBlock		      "EFC\nfor ADC  "
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "S-Function"
+	      SrcPort		      3
+	      DstBlock		      "Index Pulse"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "S-Function"
+	      SrcPort		      2
+	      DstBlock		      "Sp2"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "S-Function"
+	      SrcPort		      1
+	      DstBlock		      "Sp1"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Input to Port A\nFrom Gray Code Tracks\nMic"
+"a 926 version"
+	  Ports			  [1, 8]
+	  Position		  [45, 168, 165, 367]
+	  BackgroundColor	  "yellow"
+	  ShowPortLabels	  on
+	  TreatAsAtomicUnit	  off
+	  RTWSystemCode		  "Auto"
+	  RTWFcnNameOpts	  "Auto"
+	  RTWFileNameOpts	  "Auto"
+	  MaskType		  "Read Gray Code and Speed Tracks"
+	  MaskDescription	  "Read the inputs from the Gray Code tracks ("
+"A0-A5) \nand Speed/Increment tracks (A6-A7)"
+	  MaskHelp		  "no help is available for this block"
+	  MaskPromptString	  "BaseAddress|Sample Time (sec.)|Hardware Acc"
+"ess"
+	  MaskStyleString	  "edit,edit,checkbox"
+	  MaskTunableValueString  "on,on,on"
+	  MaskCallbackString	  "||"
+	  MaskEnableString	  "on,on,on"
+	  MaskVisibilityString	  "on,on,on"
+	  MaskToolTipString	  "on,on,on"
+	  MaskVariables		  "baseAddr=&1;stime=@2;hwAccess=@3;"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "0x300|0.01|on"
+	  MaskVariableAliases	  ",,"
+	  System {
+	    Name		    "Input to Port A\nFrom Gray Code Tracks\nM"
+"ica 926 version"
+	    Location		    [167, 464, 507, 785]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "automatic"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    ZoomFactor		    "100"
+	    AutoZoom		    on
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Reser"
+	      Position		      [25, 123, 55, 137]
+	      Port		      "1"
+	      Interpolate	      on
+	    }
+	    Block {
+	      BlockType		      "S-Function"
+	      Name		      "S-Function1"
+	      Ports		      [1, 8]
+	      Position		      [70, 16, 190, 244]
+	      FunctionName	      "SMicaPortAEnc"
+	      Parameters	      "baseAddr,stime,hwAccess"
+	      PortCounts	      "[]"
+	      SFunctionModules	      "''"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "G0"
+	      Position		      [215, 18, 245, 32]
+	      Port		      "1"
+	      OutputWhenDisabled      "held"
+	      InitialOutput	      "[]"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "G1"
+	      Position		      [215, 48, 245, 62]
+	      Port		      "2"
+	      OutputWhenDisabled      "held"
+	      InitialOutput	      "[]"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "G2"
+	      Position		      [215, 78, 245, 92]
+	      Port		      "3"
+	      OutputWhenDisabled      "held"
+	      InitialOutput	      "[]"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "G3"
+	      Position		      [215, 108, 245, 122]
+	      Port		      "4"
+	      OutputWhenDisabled      "held"
+	      InitialOutput	      "[]"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "G4"
+	      Position		      [220, 138, 250, 152]
+	      Port		      "5"
+	      OutputWhenDisabled      "held"
+	      InitialOutput	      "[]"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "G5"
+	      Position		      [220, 168, 250, 182]
+	      Port		      "6"
+	      OutputWhenDisabled      "held"
+	      InitialOutput	      "[]"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "A6"
+	      Position		      [220, 198, 250, 212]
+	      Port		      "7"
+	      OutputWhenDisabled      "held"
+	      InitialOutput	      "[]"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "A7"
+	      Position		      [220, 228, 250, 242]
+	      Port		      "8"
+	      OutputWhenDisabled      "held"
+	      InitialOutput	      "[]"
+	    }
+	    Line {
+	      SrcBlock		      "S-Function1"
+	      SrcPort		      8
+	      DstBlock		      "A7"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "S-Function1"
+	      SrcPort		      7
+	      DstBlock		      "A6"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "S-Function1"
+	      SrcPort		      6
+	      DstBlock		      "G5"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "S-Function1"
+	      SrcPort		      5
+	      DstBlock		      "G4"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Reser"
+	      SrcPort		      1
+	      DstBlock		      "S-Function1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "S-Function1"
+	      SrcPort		      4
+	      DstBlock		      "G3"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "S-Function1"
+	      SrcPort		      3
+	      DstBlock		      "G2"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "S-Function1"
+	      SrcPort		      2
+	      DstBlock		      "G1"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "S-Function1"
+	      SrcPort		      1
+	      DstBlock		      "G0"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Mica Switch Controller"
+	  Ports			  [2, 2]
+	  Position		  [420, 185, 530, 280]
+	  BackgroundColor	  "gray"
+	  ShowPortLabels	  on
+	  TreatAsAtomicUnit	  off
+	  RTWSystemCode		  "Auto"
+	  RTWFcnNameOpts	  "Auto"
+	  RTWFileNameOpts	  "Auto"
+	  MaskType		  "Mica Switch Controller"
+	  MaskDescription	  "Controls the SW5 and SW6 switches on the Di"
+"gital Unit\nThe ouptut can be used to see the state of the switches"
+	  MaskHelp		  "The Switches will be on when the input to t"
+"he Swiches are bigger than or equal to the \"Thresh Hold\" variable "
+	  MaskPromptString	  "BaseAddress|Thresh Hold|Sample Time (sec.)|"
+"Hardware Access"
+	  MaskStyleString	  "edit,edit,edit,checkbox"
+	  MaskTunableValueString  "on,on,on,on"
+	  MaskCallbackString	  "|||"
+	  MaskEnableString	  "on,on,on,on"
+	  MaskVisibilityString	  "on,on,on,on"
+	  MaskToolTipString	  "on,on,on,on"
+	  MaskVariables		  "baseAddr=&1;onWhen=@2;stime=@3;hwAccess=@4;"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "0x300|1.0|0.01|on"
+	  MaskVariableAliases	  ",,,"
+	  System {
+	    Name		    "Mica Switch Controller"
+	    Location		    [345, 519, 679, 721]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "automatic"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    ZoomFactor		    "100"
+	    AutoZoom		    on
+	    Block {
+	      BlockType		      Inport
+	      Name		      "SW5"
+	      Position		      [15, 43, 45, 57]
+	      Port		      "1"
+	      Interpolate	      on
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "SW6"
+	      Position		      [15, 88, 45, 102]
+	      Port		      "2"
+	      Interpolate	      on
+	    }
+	    Block {
+	      BlockType		      "S-Function"
+	      Name		      "S-Function"
+	      Ports		      [2, 2]
+	      Position		      [110, 25, 190, 120]
+	      FunctionName	      "SMicaSwitch"
+	      Parameters	      "baseAddr,onWhen,stime,hwAccess"
+	      PortCounts	      "[]"
+	      SFunctionModules	      "''"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "SW5 State"
+	      Position		      [235, 43, 265, 57]
+	      Port		      "1"
+	      OutputWhenDisabled      "held"
+	      InitialOutput	      "[]"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "SW6 State"
+	      Position		      [235, 88, 265, 102]
+	      Port		      "2"
+	      OutputWhenDisabled      "held"
+	      InitialOutput	      "[]"
+	    }
+	    Line {
+	      SrcBlock		      "SW6"
+	      SrcPort		      1
+	      DstBlock		      "S-Function"
+	      DstPort		      2
+	    }
+	    Line {
+	      SrcBlock		      "S-Function"
+	      SrcPort		      2
+	      DstBlock		      "SW6 State"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "SW5"
+	      SrcPort		      1
+	      DstBlock		      "S-Function"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "S-Function"
+	      SrcPort		      1
+	      DstBlock		      "SW5 State"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  "S-Function"
+	  Name			  "Port Bc for Control Mode"
+	  Ports			  [1]
+	  Position		  [235, 178, 370, 242]
+	  BackgroundColor	  "cyan"
+	  FunctionName		  "SMicaPortBcOut"
+	  Parameters		  "baseAddr,stime,hwAccess"
+	  PortCounts		  "[]"
+	  SFunctionModules	  "''"
+	  MaskType		  "Port Bc for Direct access to Control Signal"
+"s"
+	  MaskDescription	  "To directly access the Bc control register "
+"\nFor Advanced users only !"
+	  MaskHelp		  "Will directly apply the integer input to th"
+"e Bc control output\nThis module is for advenced users only .\nusing this mod"
+"ule with other Servo Trainer modules may corrupt inputs !"
+	  MaskPromptString	  "Base Address|Sample Time (sec.)|Access Hard"
+"ware"
+	  MaskStyleString	  "edit,edit,checkbox"
+	  MaskTunableValueString  "on,on,on"
+	  MaskCallbackString	  "||"
+	  MaskEnableString	  "on,on,on"
+	  MaskVisibilityString	  "on,on,on"
+	  MaskToolTipString	  "on,on,on"
+	  MaskVariables		  "baseAddr=&1;stime=@2;hwAccess=@3;"
+	  MaskDisplay		  "disp('Feedback Servo Trainer\\n Digital Uni"
+"t 33-003\\n\\nPort Bc \\n Mica 926 Version')"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "0x300|0.01|on"
+	  MaskVariableAliases	  ",,"
+	}
+      }
+    }
+  }
+}

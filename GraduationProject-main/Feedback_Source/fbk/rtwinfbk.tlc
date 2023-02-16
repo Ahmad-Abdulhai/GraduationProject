@@ -1,0 +1,99 @@
+%% SYSTLC:  RTWT Extensions for Feedback Experiments\
+%% TMF: winfbktmf MAKE: make_rtw EXTMODE: rtwinext
+
+%%****************************************************************************
+%%****************************************************************************
+%%
+%%              System TLC file for Feedback Extensions 
+%%                   of Real-Time Windows Target  
+%%              $Revision: 1.60 $
+%%              $Date: 2002/01/28 22:20:51 $
+%%
+%%****************************************************************************
+%%****************************************************************************
+
+
+%% RTW settings for Real-Time Windows Target with Feedback Extensions
+
+%assign CodeFormat = "RealTime"
+%assign TargetType = "RT"
+%assign Language   = "C"
+
+%% File system is not supported
+%assign MatFileLogging = 0
+
+%% Limit stack to 2kB and any individual variable to 1kB
+%assign MaxStackSize = CAST("Number", 2048)
+%assign MaxStackVariableSize = CAST("Number", MaxStackSize/2)
+
+%% Real-Time Windows Target initialization
+
+%assign tempVar = RTWinBoards { BoardsCached  0; BoardCount  0 }
+%undef tempVar
+
+%% Common initialization
+
+%include "genmap.tlc"
+%include "commonsetup.tlc"
+
+
+%% Include main Real-Time Windows Target header
+
+%<LibAddToCommonIncludes("rtwintgt.h")>
+
+%% Generate the files
+
+%include "commonentry.tlc"
+
+/%
+
+  BEGIN_RTW_OPTIONS
+
+  rtwoptions(1).prompt        = 'Real-Time Windows Target (with Feedback Extensions) build options';
+  rtwoptions(1).type          = 'Category';
+  rtwoptions(1).default       = 3;
+  rtwoptions(1).enable        = 'on';
+  rtwoptions(1).popupstrings  = '';
+  rtwoptions(1).tlcvariable   = '';
+  rtwoptions(1).tooltip       = '';
+  rtwoptions(1).callback      = '';
+  rtwoptions(1).opencallback  = '';
+  rtwoptions(1).closecallback = '';
+  rtwoptions(1).makevariable  = '';
+  
+  rtwoptions(2).prompt         = 'External mode';
+  rtwoptions(2).type           = 'Checkbox';
+  rtwoptions(2).default        = 'on';
+  rtwoptions(2).tlcvariable    = 'ExtMode';
+  rtwoptions(2).makevariable   = 'EXT_MODE';
+  rtwoptions(2).tooltip        = ...
+    ['Adds communication support',sprintf('\n'), ...
+    'for use with Simulink external mode'];
+  
+  rtwoptions(3).prompt         = 'Compiler optimizations';
+  rtwoptions(3).type           = 'Checkbox';
+  rtwoptions(3).default        = 'on';
+  rtwoptions(3).tlcvariable    = 'CCOptimize';
+  rtwoptions(3).makevariable   = 'CC_OPTIMIZE';
+  rtwoptions(3).tooltip        = ...
+    ['When on, the C compiler will generate real-time',sprintf('\n'), ...
+    'code fully optimized for speed'];
+    
+  rtwoptions(4).prompt         = 'Rebuild all';
+  rtwoptions(4).type           = 'Checkbox';
+  rtwoptions(4).default        = 'off';
+  rtwoptions(4).tlcvariable    = 'RebuildAll';
+  rtwoptions(4).makevariable   = 'REBUILD_ALL';
+  rtwoptions(4).tooltip        = ...
+    ['Forces all the object files to be always rebuilt',sprintf('\n'), ...
+    'regardless of their time stamps'];
+
+    
+  %----------------------------------------%
+  % Configure RTW code generation settings %
+  %----------------------------------------%
+
+  rtwgensettings.BuildDirSuffix = '_rtwin';
+
+  END_RTW_OPTIONS
+ %/

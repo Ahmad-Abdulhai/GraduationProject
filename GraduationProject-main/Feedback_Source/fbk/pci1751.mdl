@@ -1,0 +1,211 @@
+Library {
+  Name			  "pci1751"
+  Version		  4.00
+  LibraryLinkDisplay	  "none"
+  CovSaveName		  "covdata"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  off
+  StatusBar		  off
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  Created		  "Wed Aug 01 23:30:22 2001"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "Administrator"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Sat Feb 02 15:20:00 2002"
+  ModelVersionFormat	  "1.%<AutoIncrement:10>"
+  ConfigurationManager	  "none"
+  SimParamPage		  "Solver"
+  AlgebraicLoopMsg	  "warning"
+  MinStepSizeMsg	  "warning"
+  UnconnectedInputMsg	  "warning"
+  UnconnectedOutputMsg	  "warning"
+  UnconnectedLineMsg	  "warning"
+  InheritedTsInSrcMsg	  "warning"
+  SingleTaskRateTransMsg  "none"
+  MultiTaskRateTransMsg	  "error"
+  IntegerOverflowMsg	  "warning"
+  CheckForMatrixSingularity "none"
+  UnnecessaryDatatypeConvMsg "none"
+  Int32ToFloatConvMsg	  "warning"
+  SignalLabelMismatchMsg  "none"
+  LinearizationMsg	  "none"
+  VectorMatrixConversionMsg "none"
+  SfunCompatibilityCheckMsg "none"
+  BlockPriorityViolationMsg "warning"
+  ArrayBoundsChecking	  "none"
+  ConsistencyChecking	  "none"
+  Profile		  off
+  SimulationMode	  "normal"
+  RTWRetainRTWFile	  off
+  RTWMakeCommand	  "make_rtw"
+  RTWGenerateCodeOnly	  off
+  TLCProfiler		  off
+  TLCDebug		  off
+  TLCCoverage		  off
+  ExtModeMexFile	  "ext_comm"
+  ExtModeBatchMode	  off
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeLogAll		  on
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  System {
+    Name		    "pci1751"
+    Location		    [168, 400, 408, 565]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "automatic"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    ZoomFactor		    "100"
+    AutoZoom		    on
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      SubSystem
+      Name		      "Advantech \nPCI 1751 Digital I/O\nBoard Lib\n"
+      Ports		      []
+      Position		      [40, 25, 143, 87]
+      BackgroundColor	      "cyan"
+      ShowPortLabels	      on
+      TreatAsAtomicUnit	      off
+      RTWSystemCode	      "Auto"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      MaskType		      "Advantech PCI 1751 Digital I/O Borad Lib."
+      MaskDisplay	      "plot(0,0,100,100,[90,80,80,11,11],[90,90,20,20,"
+"80],[11,80],[80,80],[80,80],[20,14],[80,85,85,80],[45,45,66,66],[45,45,74,74]"
+",[20,13,13,20],[15,27,27,15,15],[75,75,26,26,75],[33,48,48,33,33],[75,75,55,5"
+"5,75],[55,55,71,71,55],[55,75,75,55,55],[33,41,41,33,33],[50,50,27,27,50],[48"
+",56,56,48,48],[50,50,27,27,50],[62,70,70,62,62],[50,50,27,27,50])"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      System {
+	Name			"Advantech \nPCI 1751 Digital I/O\nBoard Lib\n"
+	Location		[650, 469, 1005, 591]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"automatic"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	AutoZoom		on
+	Block {
+	  BlockType		  "S-Function"
+	  Name			  "Digital Input Unit"
+	  Ports			  [0, 1]
+	  Position		  [25, 25, 140, 95]
+	  BackgroundColor	  "cyan"
+	  FunctionName		  "pci1751DigIn"
+	  Parameters		  "channel,portName,tsamp,hwaccess"
+	  PortCounts		  "[]"
+	  SFunctionModules	  "''"
+	  MaskType		  "Digital Input Unit"
+	  MaskDescription	  "Digital Input  Block for PCI1751"
+	  MaskPromptString	  "Channel (0 or 1)|Input Port (A, B or  C)|sa"
+"mple Time (sec)|Access Hardware"
+	  MaskStyleString	  "edit,edit,edit,checkbox"
+	  MaskTunableValueString  "on,on,on,on"
+	  MaskCallbackString	  "|||"
+	  MaskEnableString	  "on,on,on,on"
+	  MaskVisibilityString	  "on,on,on,on"
+	  MaskToolTipString	  "on,on,on,on"
+	  MaskVariables		  "channel=@1;portName=&2;tsamp=@3;hwaccess=@4"
+";"
+	  MaskDisplay		  "disp('PCI1751 \\n Lab I/O Board \\n\\n Digi"
+"tal Input')"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "0|A|0.001|on"
+	  MaskVariableAliases	  ",,,"
+	}
+	Block {
+	  BlockType		  "S-Function"
+	  Name			  "Digital Output Unit"
+	  Ports			  [1]
+	  Position		  [180, 25, 295, 95]
+	  BackgroundColor	  "cyan"
+	  FunctionName		  "pci1751DigOut"
+	  Parameters		  "channel,portName,tsamp,hwaccess"
+	  PortCounts		  "[]"
+	  SFunctionModules	  "''"
+	  MaskType		  "Digital Output Unit"
+	  MaskDescription	  "DigitalOutput  Block for PCI1751"
+	  MaskPromptString	  "Channel (0 or 1)|Output Port (A, B, C or D)"
+"|sample Time (sec)|Access Hardware"
+	  MaskStyleString	  "edit,edit,edit,checkbox"
+	  MaskTunableValueString  "on,on,on,on"
+	  MaskCallbackString	  "|||"
+	  MaskEnableString	  "on,on,on,on"
+	  MaskVisibilityString	  "on,on,on,on"
+	  MaskToolTipString	  "on,on,on,on"
+	  MaskVariables		  "channel=@1;portName=&2;tsamp=@3;hwaccess=@4"
+";"
+	  MaskDisplay		  "disp('PCI1751 \\n Lab I/O Board \\n\\n Digi"
+"tal Output')"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "0|A|0.001|on"
+	  MaskVariableAliases	  ",,,"
+	}
+      }
+    }
+  }
+}
