@@ -1,0 +1,303 @@
+  function targMap = targDataMap(),
+
+  ;%***********************
+  ;% Create Parameter Map *
+  ;%***********************
+      
+    nTotData  = 0; %add to this count as we go
+    nTotSects = 1;
+    
+    ;%
+    ;% Define dummy sections & preallocate arrays
+    ;%
+    dumSection.nData = -1;  
+    dumSection.data  = [];
+    
+    dumData.logicalSrcIdx = -1;
+    dumData.dtTransOffset = -1;
+    
+    ;%
+    ;% Init/prealloc paramMap
+    ;%
+    paramMap.nSections           = nTotSects;
+      paramMap.sections(nTotSects) = dumSection; %prealloc
+    paramMap.nTotData            = -1;
+    
+    ;%
+    ;% Auto data (rtP)
+    ;%
+      section.nData     = 40;
+      section.data(40)  = dumData; %prealloc
+      
+	;% rtP.Read_Cart_Encoder1_P1_Size
+	section.data(1).logicalSrcIdx = 0;
+	section.data(1).dtTransOffset = 0;
+	
+	;% rtP.Read_Cart_Encoder1_P1
+	section.data(2).logicalSrcIdx = 1;
+	section.data(2).dtTransOffset = 2;
+	
+	;% rtP.Read_Cart_Encoder1_P2_Size
+	section.data(3).logicalSrcIdx = 2;
+	section.data(3).dtTransOffset = 3;
+	
+	;% rtP.Read_Cart_Encoder1_P2
+	section.data(4).logicalSrcIdx = 3;
+	section.data(4).dtTransOffset = 5;
+	
+	;% rtP.Read_Cart_Encoder1_P3_Size
+	section.data(5).logicalSrcIdx = 4;
+	section.data(5).dtTransOffset = 6;
+	
+	;% rtP.Read_Cart_Encoder1_P3
+	section.data(6).logicalSrcIdx = 5;
+	section.data(6).dtTransOffset = 8;
+	
+	;% rtP.Read_Cart_Encoder1_P4_Size
+	section.data(7).logicalSrcIdx = 6;
+	section.data(7).dtTransOffset = 9;
+	
+	;% rtP.Read_Cart_Encoder1_P4
+	section.data(8).logicalSrcIdx = 7;
+	section.data(8).dtTransOffset = 11;
+	
+	;% rtP.Counts_Meters_Gain
+	section.data(9).logicalSrcIdx = 8;
+	section.data(9).dtTransOffset = 12;
+	
+	;% rtP.Read_Pendulum_Encoder_P1_Size
+	section.data(10).logicalSrcIdx = 9;
+	section.data(10).dtTransOffset = 13;
+	
+	;% rtP.Read_Pendulum_Encoder_P1
+	section.data(11).logicalSrcIdx = 10;
+	section.data(11).dtTransOffset = 15;
+	
+	;% rtP.Read_Pendulum_Encoder_P2_Size
+	section.data(12).logicalSrcIdx = 11;
+	section.data(12).dtTransOffset = 16;
+	
+	;% rtP.Read_Pendulum_Encoder_P2
+	section.data(13).logicalSrcIdx = 12;
+	section.data(13).dtTransOffset = 18;
+	
+	;% rtP.Read_Pendulum_Encoder_P3_Size
+	section.data(14).logicalSrcIdx = 13;
+	section.data(14).dtTransOffset = 19;
+	
+	;% rtP.Read_Pendulum_Encoder_P3
+	section.data(15).logicalSrcIdx = 14;
+	section.data(15).dtTransOffset = 21;
+	
+	;% rtP.Read_Pendulum_Encoder_P4_Size
+	section.data(16).logicalSrcIdx = 15;
+	section.data(16).dtTransOffset = 22;
+	
+	;% rtP.Read_Pendulum_Encoder_P4
+	section.data(17).logicalSrcIdx = 16;
+	section.data(17).dtTransOffset = 24;
+	
+	;% rtP.Counts_Radians_Gain
+	section.data(18).logicalSrcIdx = 17;
+	section.data(18).dtTransOffset = 25;
+	
+	;% rtP.Pendulum_Velocity_Filter_A
+	section.data(19).logicalSrcIdx = 18;
+	section.data(19).dtTransOffset = 26;
+	
+	;% rtP.Pendulum_Velocity_Filter_C
+	section.data(20).logicalSrcIdx = 19;
+	section.data(20).dtTransOffset = 28;
+	
+	;% rtP.Cart_Velocity_Filter_A
+	section.data(21).logicalSrcIdx = 22;
+	section.data(21).dtTransOffset = 30;
+	
+	;% rtP.Cart_Velocity_Filter_C
+	section.data(22).logicalSrcIdx = 23;
+	section.data(22).dtTransOffset = 32;
+	
+	;% rtP.Step_Time
+	section.data(23).logicalSrcIdx = 26;
+	section.data(23).dtTransOffset = 34;
+	
+	;% rtP.Step_Y0
+	section.data(24).logicalSrcIdx = 27;
+	section.data(24).dtTransOffset = 35;
+	
+	;% rtP.Step_YFinal
+	section.data(25).logicalSrcIdx = 28;
+	section.data(25).dtTransOffset = 36;
+	
+	;% rtP.Constant_Value
+	section.data(26).logicalSrcIdx = 29;
+	section.data(26).dtTransOffset = 37;
+	
+	;% rtP.Constant1_Value
+	section.data(27).logicalSrcIdx = 30;
+	section.data(27).dtTransOffset = 38;
+	
+	;% rtP.Constant2_Value
+	section.data(28).logicalSrcIdx = 31;
+	section.data(28).dtTransOffset = 39;
+	
+	;% rtP.Matrix_Gain_Gain
+	section.data(29).logicalSrcIdx = 32;
+	section.data(29).dtTransOffset = 40;
+	
+	;% rtP.Digital_To_Analog_Convert_P1_Si
+	section.data(30).logicalSrcIdx = 33;
+	section.data(30).dtTransOffset = 44;
+	
+	;% rtP.Digital_To_Analog_Convert_P1
+	section.data(31).logicalSrcIdx = 34;
+	section.data(31).dtTransOffset = 46;
+	
+	;% rtP.Digital_To_Analog_Convert_P2_Si
+	section.data(32).logicalSrcIdx = 35;
+	section.data(32).dtTransOffset = 47;
+	
+	;% rtP.Digital_To_Analog_Convert_P2
+	section.data(33).logicalSrcIdx = 36;
+	section.data(33).dtTransOffset = 49;
+	
+	;% rtP.Digital_To_Analog_Convert_P3_Si
+	section.data(34).logicalSrcIdx = 37;
+	section.data(34).dtTransOffset = 50;
+	
+	;% rtP.Digital_To_Analog_Convert_P3
+	section.data(35).logicalSrcIdx = 38;
+	section.data(35).dtTransOffset = 52;
+	
+	;% rtP.Digital_To_Analog_Convert_P4_Si
+	section.data(36).logicalSrcIdx = 39;
+	section.data(36).dtTransOffset = 53;
+	
+	;% rtP.Digital_To_Analog_Convert_P4
+	section.data(37).logicalSrcIdx = 40;
+	section.data(37).dtTransOffset = 55;
+	
+	;% rtP.Scaling_Gain
+	section.data(38).logicalSrcIdx = 41;
+	section.data(38).dtTransOffset = 56;
+	
+	;% rtP.Saturation_UpperSat
+	section.data(39).logicalSrcIdx = 42;
+	section.data(39).dtTransOffset = 57;
+	
+	;% rtP.Saturation_LowerSat
+	section.data(40).logicalSrcIdx = 43;
+	section.data(40).dtTransOffset = 58;
+	
+      nTotData = nTotData + section.nData;
+      paramMap.sections(1) = section;
+      clear section
+      
+    
+      ;%
+      ;% Non-auto Data (parameter)
+      ;%
+    
+
+    ;%
+    ;% Add final counts to struct.
+    ;%
+    paramMap.nTotData = nTotData;
+    
+
+
+  ;%**************************
+  ;% Create Block Output Map *
+  ;%**************************
+      
+    nTotData  = 0; %add to this count as we go
+    nTotSects = 1;
+    
+    ;%
+    ;% Define dummy sections & preallocate arrays
+    ;%
+    dumSection.nData = -1;  
+    dumSection.data  = [];
+    
+    dumData.logicalSrcIdx = -1;
+    dumData.dtTransOffset = -1;
+    
+    ;%
+    ;% Init/prealloc sigMap
+    ;%
+    sigMap.nSections           = nTotSects;
+      sigMap.sections(nTotSects) = dumSection; %prealloc
+    sigMap.nTotData            = -1;
+    
+    ;%
+    ;% Auto data (rtB)
+    ;%
+      section.nData     = 8;
+      section.data(8)  = dumData; %prealloc
+      
+	;% rtB.Read_Cart_Encoder1
+	section.data(1).logicalSrcIdx = 0;
+	section.data(1).dtTransOffset = 0;
+	
+	;% rtB.Cart_Position
+	section.data(2).logicalSrcIdx = 1;
+	section.data(2).dtTransOffset = 1;
+	
+	;% rtB.Read_Pendulum_Encoder
+	section.data(3).logicalSrcIdx = 2;
+	section.data(3).dtTransOffset = 2;
+	
+	;% rtB.Pendulum_Position
+	section.data(4).logicalSrcIdx = 3;
+	section.data(4).dtTransOffset = 3;
+	
+	;% rtB.Matrix_Gain
+	section.data(5).logicalSrcIdx = 4;
+	section.data(5).dtTransOffset = 4;
+	
+	;% rtB.Saturation
+	section.data(6).logicalSrcIdx = 5;
+	section.data(6).dtTransOffset = 5;
+	
+	;% rtB.Derivative2
+	section.data(7).logicalSrcIdx = 6;
+	section.data(7).dtTransOffset = 6;
+	
+	;% rtB.Derivative1
+	section.data(8).logicalSrcIdx = 7;
+	section.data(8).dtTransOffset = 7;
+	
+      nTotData = nTotData + section.nData;
+      sigMap.sections(1) = section;
+      clear section
+      
+    
+      ;%
+      ;% Non-auto Data (signal)
+      ;%
+    
+
+    ;%
+    ;% Add final counts to struct.
+    ;%
+    sigMap.nTotData = nTotData;
+    
+
+
+  ;%
+  ;% Add individual maps to base struct.
+  ;%
+
+  targMap.paramMap  = paramMap;    
+  targMap.signalMap = sigMap;
+  
+  ;%
+  ;% Add checksums to base struct.
+  ;%
+
+
+  targMap.checksum0 = 2363710475;
+  targMap.checksum1 = 3229827051;
+  targMap.checksum2 = 1028433521;
+  targMap.checksum3 = 73119625;
+

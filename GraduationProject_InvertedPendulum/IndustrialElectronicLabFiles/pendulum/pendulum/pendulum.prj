@@ -1,0 +1,132 @@
+<deployment-project plugin="plugin.toolbox" plugin-version="1.0">
+  <configuration build-checksum="3093774148" file="D:\GraduationProject\IndustrialElectronicLabFiles\pendulum\pendulum\pendulum.prj" location="D:\GraduationProject\IndustrialElectronicLabFiles\pendulum\pendulum" name="pendulum" target="target.toolbox" target-name="Package Toolbox">
+    <param.appname>pendulum</param.appname>
+    <param.authnamewatermark />
+    <param.email />
+    <param.company />
+    <param.summary />
+    <param.description />
+    <param.screenshot />
+    <param.version>1.0</param.version>
+    <param.output>${PROJECT_ROOT}\pendulum.mltbx</param.output>
+    <param.products.name>
+      <item>MATLAB</item>
+      <item>Communications System Toolbox</item>
+      <item>Fixed-Point Designer</item>
+      <item>Image Processing Toolbox</item>
+      <item>MATLAB Coder</item>
+      <item>SimBiology</item>
+      <item>Simulink</item>
+    </param.products.name>
+    <param.products.id>
+      <item>1</item>
+      <item>36</item>
+      <item>91</item>
+      <item>17</item>
+      <item>135</item>
+      <item>103</item>
+      <item>2</item>
+    </param.products.id>
+    <param.products.version>
+      <item>8.5</item>
+      <item>6.0</item>
+      <item>5.0</item>
+      <item>9.2</item>
+      <item>2.8</item>
+      <item>5.2</item>
+      <item>8.5</item>
+    </param.products.version>
+    <param.platforms />
+    <param.guid>21f521d4-3b21-40a5-99ff-457046dd1072</param.guid>
+    <param.exclude.filters />
+    <param.examples>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;examples/&gt;</param.examples>
+    <param.demosxml />
+    <param.apps />
+    <param.docs />
+    <unset>
+      <param.authnamewatermark />
+      <param.email />
+      <param.company />
+      <param.summary />
+      <param.description />
+      <param.screenshot />
+      <param.version />
+      <param.output />
+      <param.platforms />
+      <param.exclude.filters />
+      <param.demosxml />
+      <param.apps />
+      <param.docs />
+    </unset>
+    <fileset.rootdir>
+      <file>C:\MATLAB6p5\toolbox\rtw\targets\fbk\fbk</file>
+    </fileset.rootdir>
+    <fileset.rootfiles>
+      <file>C:\MATLAB6p5\toolbox\rtw\targets\fbk\fbk\FBKICO.GIF</file>
+      <file>C:\MATLAB6p5\toolbox\rtw\targets\fbk\fbk\fbklib.mdl</file>
+      <file>C:\MATLAB6p5\toolbox\rtw\targets\fbk\fbk\INFO.XML</file>
+      <file>C:\MATLAB6p5\toolbox\rtw\targets\fbk\fbk\MicaServo.mdl</file>
+      <file>C:\MATLAB6p5\toolbox\rtw\targets\fbk\fbk\pci1711.mdl</file>
+      <file>C:\MATLAB6p5\toolbox\rtw\targets\fbk\fbk\pci1751.mdl</file>
+      <file>C:\MATLAB6p5\toolbox\rtw\targets\fbk\fbk\Pcl812fbk.mdl</file>
+      <file>C:\MATLAB6p5\toolbox\rtw\targets\fbk\fbk\Pcl812qrts.mdl</file>
+      <file>C:\MATLAB6p5\toolbox\rtw\targets\fbk\fbk\rtwinfbk.tlc</file>
+      <file>C:\MATLAB6p5\toolbox\rtw\targets\fbk\fbk\rtwinfbk_rtw_info_hook.m</file>
+      <file>C:\MATLAB6p5\toolbox\rtw\targets\fbk\fbk\ServoTrainer.mdl</file>
+      <file>C:\MATLAB6p5\toolbox\rtw\targets\fbk\fbk\winfbk_vc.tmf</file>
+      <file>C:\MATLAB6p5\toolbox\rtw\targets\fbk\fbk\winfbktmf.m</file>
+    </fileset.rootfiles>
+    <fileset.depfun.included />
+    <fileset.depfun.excluded />
+    <fileset.package />
+    <build-deliverables>
+      <file location="D:\GraduationProject\IndustrialElectronicLabFiles\pendulum\pendulum" name="pendulum.mltbx" optional="false">D:\GraduationProject\IndustrialElectronicLabFiles\pendulum\pendulum\pendulum.mltbx</file>
+    </build-deliverables>
+    <workflow />
+    <matlab>
+      <root>C:\Program Files\MATLAB\MATLAB Production Server\R2015a</root>
+      <toolboxes>
+        <toolbox name="matlabhdlcoder" />
+        <toolbox name="fixedpoint" />
+        <toolbox name="embeddedcoder" />
+        <toolbox name="matlabcoder" />
+      </toolboxes>
+      <toolbox>
+        <matlabhdlcoder>
+          <enabled>true</enabled>
+        </matlabhdlcoder>
+      </toolbox>
+      <toolbox>
+        <fixedpoint>
+          <enabled>true</enabled>
+        </fixedpoint>
+      </toolbox>
+      <toolbox>
+        <embeddedcoder>
+          <enabled>true</enabled>
+        </embeddedcoder>
+      </toolbox>
+      <toolbox>
+        <matlabcoder>
+          <enabled>true</enabled>
+        </matlabcoder>
+      </toolbox>
+    </matlab>
+    <platform>
+      <unix>false</unix>
+      <mac>false</mac>
+      <windows>true</windows>
+      <win2k>false</win2k>
+      <winxp>false</winxp>
+      <vista>false</vista>
+      <linux>false</linux>
+      <solaris>false</solaris>
+      <osver>6.2</osver>
+      <os32>false</os32>
+      <os64>true</os64>
+      <arch>win64</arch>
+      <matlab>true</matlab>
+    </platform>
+  </configuration>
+</deployment-project>

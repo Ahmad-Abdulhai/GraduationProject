@@ -1,0 +1,913 @@
+Model {
+  Name			  "Ahmad_Fares_Kalman"
+  Version		  5.0
+  SaveDefaultBlockParams  on
+  SampleTimeColors	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ExecutionOrder	  off
+  RecordCoverage	  off
+  CovPath		  "/"
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeVarName	  "covCumulativeData"
+  CovCumulativeReport	  off
+  DataTypeOverride	  "UseLocalSettings"
+  MinMaxOverflowLogging	  "UseLocalSettings"
+  MinMaxOverflowArchiveMode "Overwrite"
+  BlockNameDataTip	  off
+  BlockParametersDataTip  on
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  CloseFcn		  "rtwprivate ssgencode ModelCloseRequest InvertedPD"
+  Created		  "Wed Jul 19 00:03:05 2000"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "yousef"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Thu Jan 01 02:23:20 2004"
+  ModelVersionFormat	  "1.%<AutoIncrement:84>"
+  ConfigurationManager	  "none"
+  SimParamPage		  "Solver"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  TryForcingSFcnDF	  off
+  ExtModeMexFile	  "rtwinext"
+  ExtModeBatchMode	  off
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "oneshot"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  100000
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  off
+  ExtModeAutoUpdateStatusClock on
+  BufferReuse		  on
+  RTWExpressionDepthLimit 5
+  SimulationMode	  "external"
+  Solver		  "ode1"
+  SolverMode		  "SingleTasking"
+  StartTime		  "0.0"
+  StopTime		  "120.0"
+  MaxOrder		  5
+  MaxStep		  "auto"
+  MinStep		  "auto"
+  MaxNumMinSteps	  "-1"
+  InitialStep		  "auto"
+  FixedStep		  "0.001"
+  RelTol		  "1e-3"
+  AbsTol		  "auto"
+  OutputOption		  "RefineOutputTimes"
+  OutputTimes		  "[]"
+  Refine		  "1"
+  LoadExternalInput	  off
+  ExternalInput		  "[t, u]"
+  LoadInitialState	  off
+  InitialState		  "xInitial"
+  SaveTime		  on
+  TimeSaveName		  "tout"
+  SaveState		  off
+  StateSaveName		  "xout"
+  SaveOutput		  on
+  OutputSaveName	  "yout"
+  SaveFinalState	  off
+  FinalStateName	  "xFinal"
+  SaveFormat		  "Array"
+  Decimation		  "1"
+  LimitDataPoints	  off
+  MaxDataPoints		  "1000"
+  SignalLoggingName	  "sigsOut"
+  ConsistencyChecking	  "none"
+  ArrayBoundsChecking	  "none"
+  AlgebraicLoopMsg	  "warning"
+  BlockPriorityViolationMsg "warning"
+  MinStepSizeMsg	  "warning"
+  InheritedTsInSrcMsg	  "warning"
+  DiscreteInheritContinuousMsg "warning"
+  MultiTaskRateTransMsg	  "error"
+  SingleTaskRateTransMsg  "none"
+  CheckForMatrixSingularity "none"
+  IntegerOverflowMsg	  "warning"
+  Int32ToFloatConvMsg	  "warning"
+  ParameterDowncastMsg	  "error"
+  ParameterOverflowMsg	  "error"
+  ParameterPrecisionLossMsg "warning"
+  UnderSpecifiedDataTypeMsg "none"
+  UnnecessaryDatatypeConvMsg "none"
+  VectorMatrixConversionMsg "none"
+  InvalidFcnCallConnMsg	  "error"
+  SignalLabelMismatchMsg  "none"
+  UnconnectedInputMsg	  "warning"
+  UnconnectedOutputMsg	  "warning"
+  UnconnectedLineMsg	  "warning"
+  SfunCompatibilityCheckMsg "none"
+  RTWInlineParameters	  off
+  BlockReductionOpt	  off
+  BooleanDataType	  off
+  ConditionallyExecuteInputs on
+  ParameterPooling	  on
+  OptimizeBlockIOStorage  on
+  ZeroCross		  on
+  AssertionControl	  "UseLocalSettings"
+  ProdHWDeviceType	  "Microprocessor"
+  ProdHWWordLengths	  "8,16,32,32"
+  RTWSystemTargetFile	  "rtwinfbk.tlc"
+  RTWTemplateMakefile	  "winfbktmf"
+  RTWMakeCommand	  "make_rtw"
+  RTWGenerateCodeOnly	  off
+  RTWRetainRTWFile	  off
+  TLCProfiler		  off
+  TLCDebug		  off
+  TLCCoverage		  off
+  TLCAssertion		  off
+  RTWOptions		  " -aCCOptimize=1 -aEnforceIntegerDowncast=1 -aExtMod"
+"e=1 -aFoldNonRolledExpr=1 -aForceParamTrailComments=0 -aGenerateComments=1 -a"
+"GenerateReport=0 -aIncDataTypeInIds=0 -aIncHierarchyInIds=0 -aInlineInvariant"
+"Signals=0 -aInlineParameters=0 -aInlinedPrmAccess=\"Literals\" -aLocalBlockOu"
+"tputs=1 -aMaxRTWIdLen=31 -aPrefixModelToSubsysFcnNames=1 -aRTWVerbose=1 -aReb"
+"uildAll=0 -aRollThreshold=5 -aShowEliminatedStatements=1"
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      Constant
+      Value		      "1"
+      VectorParams1D	      on
+      ShowAdditionalParam     off
+      OutDataTypeMode	      "Inherit from 'Constant value'"
+      OutDataType	      "sfix(16)"
+      ConRadixGroup	      "Use specified scaling"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Demux
+      Outputs		      "4"
+      DisplayOption	      "none"
+      BusSelectionMode	      off
+    }
+    Block {
+      BlockType		      DiscretePulseGenerator
+      PulseType		      "Sample based"
+      Amplitude		      "1"
+      Period		      "2"
+      PulseWidth	      "1"
+      PhaseDelay	      "0"
+      SampleTime	      "1"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      Gain
+      Gain		      "1"
+      Multiplication	      "Element-wise(K.*u)"
+      ShowAdditionalParam     off
+      ParameterDataTypeMode   "Same as input"
+      ParameterDataType	      "sfix(16)"
+      ParameterScalingMode    "Best Precision: Matrix-wise"
+      ParameterScaling	      "2^0"
+      OutDataTypeMode	      "Same as input"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Inport
+      Port		      "1"
+      PortDimensions	      "-1"
+      SampleTime	      "-1"
+      ShowAdditionalParam     off
+      LatchInput	      off
+      DataType		      "auto"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Mux
+      Inputs		      "4"
+      DisplayOption	      "none"
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Saturate
+      UpperLimit	      "0.5"
+      LowerLimit	      "-0.5"
+      LinearizeAsGain	      on
+      ZeroCross		      on
+    }
+    Block {
+      BlockType		      Scope
+      Floating		      off
+      ModelBased	      off
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "on"
+      Grid		      "on"
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      "S-Function"
+      FunctionName	      "system"
+      PortCounts	      "[]"
+      SFunctionModules	      "''"
+    }
+    Block {
+      BlockType		      StateSpace
+      A			      "1"
+      B			      "1"
+      C			      "1"
+      D			      "1"
+      X0		      "0"
+      AbsoluteTolerance	      "auto"
+      Realization	      "auto"
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      on
+      Permissions	      "ReadWrite"
+      RTWSystemCode	      "Auto"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      MinMaxOverflowLogging   "UseLocalSettings"
+    }
+    Block {
+      BlockType		      Sum
+      IconShape		      "rectangular"
+      Inputs		      "++"
+      ShowAdditionalParam     off
+      InputSameDT	      on
+      OutDataTypeMode	      "Same as first input"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+    }
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  System {
+    Name		    "Ahmad_Fares_Kalman"
+    Location		    [2, 82, 1014, 722]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    ZoomFactor		    "92"
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      Constant
+      Name		      "Constant"
+      Position		      [805, 270, 835, 300]
+      Value		      "pi"
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "Counts->Meters"
+      Position		      [250, 95, 280, 125]
+      Gain		      ".156/2048"
+      Port {
+	PortNumber		1
+	Name			"Cart Position"
+	TestPoint		off
+	LinearAnalysisOutput	off
+	LinearAnalysisInput	off
+	RTWStorageClass		"Auto"
+	DataLogging		off
+	DataLoggingNameMode	"SignalName"
+	DataLoggingDecimateData	off
+	DataLoggingDecimation	"2"
+	DataLoggingLimitDataPoints off
+	DataLoggingMaxPoints	"5000"
+      }
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "Counts->Radians"
+      Position		      [250, 230, 280, 260]
+      Gain		      "-2*pi/2048"
+      Port {
+	PortNumber		1
+	Name			"Pendulum Position"
+	TestPoint		off
+	LinearAnalysisOutput	off
+	LinearAnalysisInput	off
+	RTWStorageClass		"Auto"
+	DataLogging		off
+	DataLoggingNameMode	"SignalName"
+	DataLoggingDecimateData	off
+	DataLoggingDecimation	"2"
+	DataLoggingLimitDataPoints off
+	DataLoggingMaxPoints	"5000"
+      }
+    }
+    Block {
+      BlockType		      Demux
+      Name		      "Demux"
+      Ports		      [1, 4]
+      Position		      [815, 191, 820, 254]
+      BackgroundColor	      "black"
+      ShowName		      off
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Digital To Analog\nConverter"
+      Ports		      [1]
+      Position		      [680, 332, 780, 408]
+      BackgroundColor	      "green"
+      DropShadow	      on
+      NamePlacement	      "alternate"
+      SourceBlock	      "pci1711/Advantech \nPCI1711 I//O Board Lib/Feed"
+"back DAC"
+      SourceType	      "DAC Unit for Feedback Experiments"
+      channel		      "0"
+      range		      "0"
+      tsamp		      "0.001"
+      hwAccess		      on
+    }
+    Block {
+      BlockType		      Mux
+      Name		      "Mux1"
+      Ports		      [2, 1]
+      Position		      [600, 206, 605, 244]
+      ShowName		      off
+      Inputs		      "2"
+      DisplayOption	      "bar"
+    }
+    Block {
+      BlockType		      Mux
+      Name		      "Mux2"
+      Ports		      [2, 1]
+      Position		      [885, 141, 890, 179]
+      ShowName		      off
+      Inputs		      "2"
+      DisplayOption	      "bar"
+    }
+    Block {
+      BlockType		      Mux
+      Name		      "Mux3"
+      Ports		      [2, 1]
+      Position		      [885, 51, 890, 89]
+      ShowName		      off
+      Inputs		      "2"
+      DisplayOption	      "bar"
+    }
+    Block {
+      BlockType		      DiscretePulseGenerator
+      Name		      "Pulse\nGenerator"
+      Position		      [440, 353, 485, 387]
+      PulseType		      "Time based"
+      Amplitude		      "1.2"
+      Period		      "100"
+      PulseWidth	      "0.5"
+      PhaseDelay	      "20"
+      VectorParams1D	      off
+      Port {
+	PortNumber		1
+	Name			"Voltage"
+	TestPoint		off
+	LinearAnalysisOutput	off
+	LinearAnalysisInput	off
+	RTWStorageClass		"Auto"
+	DataLogging		off
+	DataLoggingNameMode	"SignalName"
+	DataLoggingDecimateData	off
+	DataLoggingDecimation	"2"
+	DataLoggingLimitDataPoints off
+	DataLoggingMaxPoints	"5000"
+      }
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Read Cart Encoder1"
+      Ports		      [0, 1]
+      Position		      [70, 74, 185, 146]
+      BackgroundColor	      "green"
+      DropShadow	      on
+      SourceBlock	      "pci1711/Advantech \nPCI1711 I//O Board Lib/Feed"
+"back Encoder "
+      SourceType	      "Feedback Encoder Block"
+      channel		      "0"
+      offset		      "0"
+      tsamp		      "0.001"
+      hwAccess		      on
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Read Pendulum Encoder"
+      Ports		      [0, 1]
+      Position		      [75, 209, 190, 281]
+      BackgroundColor	      "green"
+      DropShadow	      on
+      SourceBlock	      "pci1711/Advantech \nPCI1711 I//O Board Lib/Feed"
+"back Encoder "
+      SourceType	      "Feedback Encoder Block"
+      channel		      "1"
+      offset		      "-1024"
+      tsamp		      "0.001"
+      hwAccess		      on
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Scaling and Safety"
+      Ports		      [1, 1]
+      Position		      [560, 335, 630, 405]
+      BackgroundColor	      "red"
+      DropShadow	      on
+      NamePlacement	      "alternate"
+      TreatAsAtomicUnit	      off
+      System {
+	Name			"Scaling and Safety"
+	Location		[551, 383, 872, 529]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "In1"
+	  Position		  [15, 53, 45, 67]
+	}
+	Block {
+	  BlockType		  Saturate
+	  Name			  "Saturation"
+	  Position		  [140, 45, 170, 75]
+	  UpperLimit		  "2.5"
+	  LowerLimit		  "-2.5"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Scaling"
+	  Position		  [70, 45, 100, 75]
+	  Port {
+	    PortNumber		    1
+	    Name		    "actual LoadPosition"
+	    TestPoint		    off
+	    LinearAnalysisOutput    off
+	    LinearAnalysisInput	    off
+	    RTWStorageClass	    "Auto"
+	    DataLogging		    off
+	    DataLoggingNameMode	    "SignalName"
+	    DataLoggingDecimateData off
+	    DataLoggingDecimation   "2"
+	    DataLoggingLimitDataPoints off
+	    DataLoggingMaxPoints    "5000"
+	  }
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Out1"
+	  Position		  [210, 53, 240, 67]
+	}
+	Line {
+	  SrcBlock		  "Saturation"
+	  SrcPort		  1
+	  DstBlock		  "Out1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "In1"
+	  SrcPort		  1
+	  DstBlock		  "Scaling"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "actual LoadPosition"
+	  SrcBlock		  "Scaling"
+	  SrcPort		  1
+	  DstBlock		  "Saturation"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum"
+      Ports		      [2, 1]
+      Position		      [840, 205, 860, 225]
+      ShowName		      off
+      IconShape		      "round"
+      Inputs		      "|++"
+      InputSameDT	      off
+      OutDataTypeMode	      "Inherit via internal rule"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "System States"
+      Ports		      [1]
+      Position		      [1020, 44, 1095, 96]
+      BackgroundColor	      "magenta"
+      ExtModeUploadOption     "log"
+      FontWeight	      "bold"
+      Location		      [5, 60, 1029, 741]
+      Open		      on
+      NumInputPorts	      "1"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      List {
+	ListType		SelectedSignals
+	axes1			""
+      }
+      TimeRange		      "50"
+      YMin		      "0.2802"
+      YMax		      "0.280575"
+      SaveToWorkspace	      on
+      SaveName		      "y"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      off
+      Decimation	      "0.1"
+      SampleInput	      on
+      SampleTime	      "0.01"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "System States1"
+      Ports		      [1]
+      Position		      [1020, 119, 1095, 171]
+      BackgroundColor	      "magenta"
+      ExtModeUploadOption     "log"
+      FontWeight	      "bold"
+      Location		      [1, 56, 1025, 737]
+      Open		      off
+      NumInputPorts	      "1"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      List {
+	ListType		SelectedSignals
+	axes1			""
+      }
+      TimeRange		      "50"
+      YMin		      "-0.4"
+      YMax		      "0.4"
+      SaveToWorkspace	      on
+      SaveName		      "y1"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      off
+      Decimation	      "0.1"
+      SampleInput	      on
+      SampleTime	      "0.01"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "System States2"
+      Ports		      [1]
+      Position		      [1020, 199, 1095, 251]
+      BackgroundColor	      "magenta"
+      ExtModeUploadOption     "log"
+      FontWeight	      "bold"
+      Location		      [5, 60, 1029, 741]
+      Open		      on
+      NumInputPorts	      "1"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      List {
+	ListType		SelectedSignals
+	axes1			""
+      }
+      TimeRange		      "50"
+      YMin		      "-2.5e+301"
+      YMax		      "5e+302"
+      SaveToWorkspace	      on
+      SaveName		      "y2"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      off
+      Decimation	      "0.1"
+      SampleInput	      on
+      SampleTime	      "0.01"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "System States3"
+      Ports		      [1]
+      Position		      [1020, 284, 1095, 336]
+      BackgroundColor	      "magenta"
+      ExtModeUploadOption     "log"
+      FontWeight	      "bold"
+      Location		      [710, 60, 1019, 565]
+      Open		      off
+      NumInputPorts	      "1"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      List {
+	ListType		SelectedSignals
+	axes1			""
+      }
+      TimeRange		      "50"
+      YMin		      "-0.125"
+      YMax		      "0.025"
+      SaveToWorkspace	      on
+      SaveName		      "y3"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      off
+      Decimation	      "0.1"
+      SampleInput	      on
+      SampleTime	      "0.01"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "kalman"
+      Ports		      [1, 1]
+      Position		      [685, 197, 790, 253]
+      TreatAsAtomicUnit	      off
+      MaskPromptString	      "Q|R"
+      MaskStyleString	      "edit,edit"
+      MaskTunableValueString  "on,on"
+      MaskCallbackString      "|"
+      MaskEnableString	      "on,on"
+      MaskVisibilityString    "on,on"
+      MaskToolTipString	      "on,on"
+      MaskVarAliasString      ","
+      MaskVariables	      "Q=@1;R=@2;"
+      MaskInitialization      "mc = 1.12;\nmpw = 0.095;\nmps = 0.025;\nl = 0.0"
+"33245968; % 0.0167903;\nfc = 2.53165; % FS = 2.53165; FC = 2.28133\nfp = 0.00"
+"0107443;\nJ = 0.013935418; % 0.0135735;\ng = 9.81;\nvf = 9.4/2.5; % Voltage t"
+"o Motor Force ratio % 17.463\nmp = mpw + mps;\na = l^2 + J/(mc + mp);\nmu = ("
+"mc + mp)*l;\nTs = 0.01;\n\n% theta 0 in upward position\n% theta pi in downwa"
+"rd position\ns = -1; % 1 when upward  -1 when downward\n\nA = [0          0  "
+"            1               0;\n     0          0              0             "
+"  1;\n     0      (l*mu*g)/J    -(a*fc)/J    -(l*fp)/J;\n     0      s*(mu*g)"
+"/J    -s*(l*fc)/J    -(fp)/J];\n \nB = [           0;\n                0;\n  "
+"       (vf*a)/J;\n      (s*vf*l)/J];\n  \nC = [1 0 0 0];\n \nD = [0];\n\nG = "
+"ones(4,4);\n% H = 1;\n\nsys = ss(A,[B G],[C],[D zeros(1,4)]); % continous sys"
+"\n% sysd = c2d(sys,Ts);\n\n% Ad = [Ts*A + eye(4)];\n% Bd = Ts*B;\n\nQn = diag"
+"(Q);\nRn = diag(R);\n\n[kf,L,P] = kalman(sys,Qn,Rn);\n\nAk = A - L*C;\nBk = ["
+"B L];\nCk = eye(4);\nDk = 0*[B L];"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      MaskValueString	      "[1e-03 1e-03 1000 1]|1e-04"
+      System {
+	Name			"kalman"
+	Location		[433, 404, 931, 703]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  Inport
+	  Name			  "In1"
+	  Position		  [110, 103, 140, 117]
+	}
+	Block {
+	  BlockType		  StateSpace
+	  Name			  "State-Space"
+	  Position		  [210, 93, 270, 127]
+	  A			  "Ak"
+	  B			  "Bk"
+	  C			  "Ck"
+	  D			  "Dk"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Out1"
+	  Position		  [360, 103, 390, 117]
+	}
+	Line {
+	  SrcBlock		  "In1"
+	  SrcPort		  1
+	  DstBlock		  "State-Space"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "State-Space"
+	  SrcPort		  1
+	  DstBlock		  "Out1"
+	  DstPort		  1
+	}
+      }
+    }
+    Line {
+      Name		      "Cart Position"
+      Labels		      [0, 0]
+      SrcBlock		      "Counts->Meters"
+      SrcPort		      1
+      Points		      [140, 0]
+      Branch {
+	Points			[145, 0; 0, 125]
+	DstBlock		"Mux1"
+	DstPort			2
+      }
+      Branch {
+	Points			[0, -50]
+	DstBlock		"Mux3"
+	DstPort			1
+      }
+    }
+    Line {
+      Name		      "Pendulum Position"
+      Labels		      [0, 0; 2, 1]
+      SrcBlock		      "Counts->Radians"
+      SrcPort		      1
+      Points		      [85, 0; 0, -95]
+      DstBlock		      "Mux2"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Scaling and Safety"
+      SrcPort		      1
+      DstBlock		      "Digital To Analog\nConverter"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Read Cart Encoder1"
+      SrcPort		      1
+      DstBlock		      "Counts->Meters"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Read Pendulum Encoder"
+      SrcPort		      1
+      DstBlock		      "Counts->Radians"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Mux1"
+      SrcPort		      1
+      DstBlock		      "kalman"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "kalman"
+      SrcPort		      1
+      DstBlock		      "Demux"
+      DstPort		      1
+    }
+    Line {
+      Name		      "Voltage"
+      Labels		      [0, 0]
+      SrcBlock		      "Pulse\nGenerator"
+      SrcPort		      1
+      Points		      [35, 0]
+      Branch {
+	DstBlock		"Scaling and Safety"
+	DstPort			1
+      }
+      Branch {
+	Labels			[1, 0]
+	Points			[0, -155]
+	DstBlock		"Mux1"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Demux"
+      SrcPort		      1
+      Points		      [25, 0; 0, -120]
+      DstBlock		      "Mux3"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Mux3"
+      SrcPort		      1
+      DstBlock		      "System States"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux"
+      SrcPort		      3
+      Points		      [145, 0; 0, -85]
+      DstBlock		      "System States1"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux"
+      SrcPort		      4
+      Points		      [90, 0; 0, 65]
+      DstBlock		      "System States3"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Constant"
+      SrcPort		      1
+      Points		      [10, 0]
+      DstBlock		      "Sum"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Demux"
+      SrcPort		      2
+      DstBlock		      "Sum"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Sum"
+      SrcPort		      1
+      Points		      [0, -45]
+      DstBlock		      "Mux2"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Mux2"
+      SrcPort		      1
+      Points		      [110, 0]
+      DstBlock		      "System States2"
+      DstPort		      1
+    }
+    Annotation {
+      Name		      "Measure System States"
+      Position		      [172, 37]
+      FontName		      "times"
+      FontSize		      24
+      FontWeight	      "bold"
+    }
+    Annotation {
+      Name		      "Output Control"
+      Position		      [642, 452]
+      FontName		      "Times New Roman"
+      FontSize		      20
+      FontWeight	      "bold"
+    }
+  }
+}

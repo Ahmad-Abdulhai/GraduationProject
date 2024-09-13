@@ -1,0 +1,32 @@
+F5  Placement de Pôles.   $$REGULATEUR
+Retard :
+ 0
+B*..deg:1
+0.21288 0.08066 
+A...deg:1
+ 1.  -0.73901 
+Bm..deg:1
+  0.180219   0.114642 
+Am..deg:2
+ 1.   -0.964380   0.259240 
+R...deg:1
+  2.745948  -1.741452 
+S...deg:2
+  1.000000  -0.809927  -0.190073 
+T...deg:2
+  3.406691  -3.285344   0.883151 
+Période d'échantillonnage (Te): 
+ .025
+P...deg:2
+ 1.   -0.964380   0.259240 
+C...deg:0
+ 1.  
+HR..deg:0
+ 1.  
+HS..deg:1
+ 1.   -1.000000 
+Valeurs continues 0
+$POURSUITE  1  0
+C  30  0.9
+$REGULATION  1  0
+C  30  0.9

@@ -1,0 +1,19 @@
+/*
+ * IP1_types.h
+ *
+ * Real-Time Workshop code generation for Simulink model "IP1.mdl".
+ *
+ * Model Version                        : 1.82
+ * Real-Time Workshop file version      : 5.0 $Date: 2002/05/30 19:21:33 $
+ * Real-Time Workshop file generated on : Wed Mar 28 03:06:19 2012
+ * TLC version                          : 5.0 (Jun 18 2002)
+ * C source code generated on           : Wed Mar 28 03:06:19 2012
+ */
+
+#ifndef _RTW_HEADER_IP1_types_h_
+# define _RTW_HEADER_IP1_types_h_
+
+/* Parameters (auto storage) */
+typedef struct _Parameters Parameters;
+
+#endif                                  /* _RTW_HEADER_IP1_types_h_ */

@@ -1,0 +1,105 @@
+
+Cette disquette contient la version 1.24 du logiciel WinTRAC, ainsi
+ qu'une procédure d'installation automatique.
+
+La démarche à suivre pour installer WinTRAC sur votre ordinateur est
+ décrite ci-après, en supposant que vous réalisez cette installation
+ à partir du lecteur A. Si vous utilisez un autre lecteur, il faut
+ remplacer A par la désignation correcte du lecteur utilisé dans la
+ procédure ci-dessous.
+
+1. Choisissez la commande "Exécuter" dans le menu "Fichier" du
+  Gestionnaire de programmes de Windows. Une boite de dialogue
+  est alors affichée.
+	 
+2. Tapez A:INSTALL dans la zone de texte de cette boite de dialogue,
+  puis cliquez sur le bouton OK ou appuyez sur la touche ENTER. Après
+  quelques instants, un écran d'accueil apparait.
+
+3. Cliquez sur le bouton OK pour commener l'installation. 
+  L'utilitaire d'installation vous demande alors dans quel groupe vous 
+  désirez placer l'icône du logiciel WinTRAC.
+  Vous pouvez soit accepter le nom par défaut (WinPIM plus), soit
+  indiquer un nom de groupe différent. Cette saisie est obligatoire.
+ 
+4. Cliquez sur le bouton OK, ou appuyez sur la touche ENTER, pour 
+  valider le contenu de cette boite de dialogue.
+  L'utilitaire d'installation vous demande alors si vous désirez faire
+  une installation complète, incluant les fichiers d'exemple, ou copier
+  uniquement le logiciel.
+ 
+5. Indiquez votre choix à l'aide de la souris, puis cliquez sur OK.
+  L'utilitaire d'installation vous demande alors dans quel répertoire
+  vous désirez installer le logiciel WinTRAC. 
+  Vous pouvez soit accepter le répertoire par défaut (C:\WPIMPLUS\EXE),
+  soit indiquer un nom de répertoire différent.
+
+6. Cliquez sur le bouton OK, ou appuyez sur la touche ENTER, pour 
+  valider le contenu de cette boite de dialogue.
+  L'utilitaire d'installation vous demande alors dans quel répertoire
+  vous désirez copier les fichiers d'exemple (si vous faites une 
+  installation complète), ou quel répertoire sera utilisé comme
+  répertoire de travail initial par le logiciel.
+  Vous pouvez soit accepter le répertoire par défaut, soit indiquer 
+  un nom de répertoire différent.
+
+7. Cliquez sur le bouton OK, ou appuyez sur la touche ENTER.
+  L'utilitaire d'installation affiche alors une boite de dialogue vous
+  permettant de suivre sa progression.
+  Si vous installez le logiciel WinTRAC à la place d'une version plus
+  ancienne, l'utilitaire d'installation vous demande une confirmation 
+  chaque fois qu'un ancien fichier doit être remplacé.
+
+8. Une fois l'installation terminée, une boite de dialogue vous confirme 
+  qu'elle s'est bien déroulée jusqu'au bout sans problème.
+
+9. Cliquez sur le bouton OK, ou appuyez sur la touche ENTER : WinTRAC est
+  prêt à être utilisé!
+
+
+
+
+*****************************************
+*   Additions au manuel d'utilisation   *
+*****************************************
+
+1.1 Configuration informatique
+
+ Les cartes d'entrées/sorties suivantes sont maintenant supportées par 
+le logiciel WinTRAC :
+ * AX 5621 (Axiom)
+ * DCX 703 (Digital Control)
+
+
+1.2 Procédure d'installation
+
+ La procédure d'installation décrite dans le manuel n'a plus lieu d'être,
+car elle a été simplifiée et remplacée par la démarche décrite plus haut.
+ De plus, le fichier BWCCF.DLL du répertoire \WINDOWS\SYSTEM a été 
+renommé BWCCFRA.DLL.
+
+
+4.1.2 Environnement
+
+ L'utilisation des commandes "Lire" et "Sauvegarder" l'environnement
+n'est possible que lorsque toutes les fenêtres d'application sont 
+fermées. Les données saisies dans ces fenêtres font bien sûr partie
+du fichier d'environnement.
+
+
+4.3.2 Editer Régulateur
+
+ Il est désormais possible, en utilisant le bouton PID, de spécifier le 
+régulateur à utiliser sous la forme d'un PID continu, qui est discrétisé
+par WinTRAC.
+ La position des diverses actions, puis les valeurs numériques des
+coefficients continus sont alors demandés à l'utilisateur.
+ Se reporter au fichier d'aide en ligne pour la signification exacte de
+ces paramètres.
+
+
+Annexe A7 Carte DAC 6214
+
+ Il est maintenant possible de génèrer le signal logique assurant la 
+présence du PC utilisé par certaines maquettes didactiques d'Amira.
+

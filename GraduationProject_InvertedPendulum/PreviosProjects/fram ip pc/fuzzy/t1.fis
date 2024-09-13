@@ -1,0 +1,76 @@
+[System]
+Name='t1'
+Type='mamdani'
+Version=2.0
+NumInputs=2
+NumOutputs=1
+NumRules=30
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='theta'
+Range=[0 1]
+NumMFs=5
+MF1='NL':'trimf',[-0.25 0 0.25]
+MF2='NM':'trimf',[0 0.25 0.5]
+MF3='ZR':'trimf',[0.25 0.5 0.75]
+MF4='PM':'trimf',[0.5 0.75 1]
+MF5='PL':'trimf',[0.75 1 1.25]
+
+[Input2]
+Name='Velocity'
+Range=[0 1]
+NumMFs=6
+MF1='NM':'trimf',[0 0.2 0.4]
+MF2='NS':'trimf',[0.2 0.4 0.6]
+MF3='PS':'trimf',[0.4 0.6 0.8]
+MF4='PM':'trimf',[0.6 0.8 1]
+MF5='NL':'trapmf',[0.00685 0.0108 0.111 0.1944]
+MF6='PL':'trapmf',[0.794973544973545 0.889 0.989 1]
+
+[Output1]
+Name='F'
+Range=[0 255]
+NumMFs=6
+MF1='NL':'trimf',[-51 -1.332e-015 51]
+MF2='NM':'trimf',[0 51 102]
+MF3='NS':'trimf',[51 102 153]
+MF4='PS':'trimf',[102 153 204]
+MF5='PM':'trimf',[153 204 255]
+MF6='PL':'trimf',[204 255 306]
+
+[Rules]
+1 5, 1 (1) : 1
+1 1, 1 (1) : 1
+1 2, 1 (1) : 1
+1 3, 2 (1) : 1
+1 4, 3 (1) : 1
+1 6, 4 (1) : 1
+2 5, 1 (1) : 1
+2 1, 1 (1) : 1
+2 2, 2 (1) : 1
+2 3, 3 (1) : 1
+2 4, 4 (1) : 1
+2 6, 5 (1) : 1
+3 5, 1 (1) : 1
+3 1, 2 (1) : 1
+3 2, 3 (1) : 1
+3 3, 4 (1) : 1
+3 4, 5 (1) : 1
+3 6, 6 (1) : 1
+4 5, 2 (1) : 1
+4 1, 3 (1) : 1
+4 2, 4 (1) : 1
+4 3, 5 (1) : 1
+4 4, 6 (1) : 1
+4 6, 6 (1) : 1
+5 5, 3 (1) : 1
+5 1, 4 (1) : 1
+5 2, 5 (1) : 1
+5 3, 6 (1) : 1
+5 4, 6 (1) : 1
+5 6, 6 (1) : 1

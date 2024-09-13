@@ -1,0 +1,456 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0054)http://www.aptronix.com/fuzzynet/applnote/twostage.htm -->
+<HTML><HEAD><TITLE>Two Stage Inverted Pendulum</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+<META content="MSHTML 6.00.2900.2180" name=GENERATOR>
+<META content="Microsoft FrontPage 2.0" name=FORMATTER></HEAD>
+<BODY bgColor=#ffffff>
+<P><IMG height=28 src="Two Stage Inverted Pendulum_files/applic1.gif" width=145 
+align=middle> <IMG height=5 src="Two Stage Inverted Pendulum_files/applic2.gif" 
+width=335 align=middle> <IMG height=22 
+src="Two Stage Inverted Pendulum_files/applic3.gif" width=102 align=middle></P>
+<H1><A name="Application Notes">Application Notes</A></H1>
+<P>APN08V20-1092</P>
+<BLOCKQUOTE>
+  <P><A 
+  href="http://www.aptronix.com/fuzzynet/applnote/twostage.htm#INTRODUCTION&nbsp;">Introduction<FONT 
+  size=2>&nbsp;</FONT></A><FONT size=2><BR></FONT><A 
+  href="http://www.aptronix.com/fuzzynet/applnote/twostage.htm#SYSTEM DESIGN">System 
+  Design</A> <BR><A 
+  href="http://www.aptronix.com/fuzzynet/applnote/twostage.htm#CONTROLLER DESIGN">Controller 
+  Design</A><BR><A 
+  href="http://www.aptronix.com/fuzzynet/applnote/twostage.htm#Control Curve"><EM>Control 
+  Curve</EM></A><BR><A 
+  href="http://www.aptronix.com/fuzzynet/applnote/twostage.htm#TUNING">Tuning</A><BR><A 
+  href="http://www.aptronix.com/fuzzynet/applnote/twostage.htm#IMPLEMENTATION">Implementation</A><BR><A 
+  href="http://www.aptronix.com/fuzzynet/applnote/twostage.htm#COMMENTS">Comments</A><BR><A 
+  href="http://www.aptronix.com/fuzzynet/fiusource/twostage.htm"><EM>Appendix A 
+  : FIU Source Code</EM></A><BR>Appendix B: MC68HC11 Assembly 
+Code</P></BLOCKQUOTE>
+<HR>
+
+<H1 align=center><B>Two Stage Inverted Pendulum</B></H1>
+<P><A name=INTRODUCTION&nbsp;><B>INTRODUCTION</B><FONT 
+size=2>&nbsp;</FONT></A></P>
+<P>So far, in the application note series, we have provided several examples 
+showing how to create fuzzy controllers with FIDE. However, these examples do 
+not provide topics on implementation of the designed system. In this application 
+note, we use an example of an inverted pendulum to provide details on all 
+aspects of fuzzy logic based system design.</P>
+<P>We will begin with system design; analyzing control behavior of a two-stage 
+inverted pendulum. We will then show how to design a fuzzy controller for the 
+system. We will describe a control curve and how it differs from that of 
+conventional controllers when using a fuzzy controller. Finally, we will discuss 
+how to use this curve to define labels and membership functions for variables, 
+as well as how to create rules for the controller. </P>
+<P><A 
+href="http://www.aptronix.com/fuzzynet/applnote/twostage.htm#Application Notes">Back 
+to Top</A></P>
+<P><A name="SYSTEM DESIGN"><B>SYSTEM DESIGN </B></A></P>
+<P>Two stage inverted pendulum is illustrated in <A 
+href="http://www.aptronix.com/fuzzynet/applnote/twostage.htm#Figure 1 Two Stage Inverted Pendulum">Figure 
+1</A>. A servo motor produces a force <EM>f </EM>to move a cart in order to 
+balance the two stage inverted pendulum on the cart, i.e., to keep <FONT 
+face=Symbol size=3><EM>q</EM></FONT><FONT face=Symbol size=1> 1</FONT><FONT 
+size=2> </FONT>and<EM> </EM><FONT face=Symbol><EM>q</EM></FONT><FONT face=Symbol 
+size=1> 2</FONT>to be zero.<FONT size=4><EM> </EM></FONT><FONT face=Symbol 
+size=3><EM>q</EM></FONT><FONT face=Symbol size=2> </FONT><FONT face=Symbol 
+size=1>1</FONT><FONT size=2> </FONT>is the angle of the first stage pendulum 
+from the vertical direction, while <FONT face=Symbol><EM>q</EM> </FONT><FONT 
+face=Symbol size=1>2</FONT><FONT size=1> </FONT>is the angle of the second stage 
+pendulum from the vertical direction. These two angles are measured with two 
+potentiometers<FONT size=2><SUP>*</SUP></FONT>. </P>
+<P align=center>&nbsp;&nbsp;<A 
+name="Figure 1 Two Stage Inverted Pendulum">Figure 1 <I>Two Stage Inverted 
+Pendulum</I></A></P>
+<P align=center><IMG height=224 
+src="Two Stage Inverted Pendulum_files/twosta1.gif" width=371></P>
+<P><A 
+href="http://www.aptronix.com/fuzzynet/applnote/twostage.htm#Figure 2 Two Stage Inverted Pendulum Control System">Figure 
+2</A> shows the control system diagram. There are two control loops in this 
+system. The inner loop is for controlling the first stage pendulum; the outer 
+loop is for controlling the second stage. Without outer loop this becomes a 
+single-stage inverted pendulum system. In that case, our control target is<FONT 
+size=4><EM> </EM></FONT><FONT face=Symbol size=3><EM>q</EM></FONT><FONT 
+face=Symbol size=2> </FONT><FONT face=Symbol size=1>1 </FONT><FONT face=Symbol 
+size=2>= 0</FONT><FONT size=2>. </FONT>However when we have two stages, the 
+control target for the first stage is no longer <FONT face=Symbol size=3><EM>q 
+</EM></FONT><FONT face=Symbol size=1>1</FONT><FONT face=Symbol size=2> = 
+0</FONT><FONT size=2>. </FONT>Instead, we have to adjust the first stage to a 
+suitable angle in accordance with the angle of the second stage(see <A 
+href="http://www.aptronix.com/fuzzynet/applnote/twostage.htm#Figure 3 Control Strategy">Figure 
+3</A>). In other words, in a two stage inverted pendulum system, the purpose of 
+the outer loop is to produce an angle for the first stage to follow. </P>
+<P>&nbsp;We may summarize the control strategy for a two stage inverted pendulum 
+as follows: </P>
+<UL>
+  <LI>
+  <P align=left>According to the angle of the second stage <FONT 
+  face=Symbol><EM>q</EM> </FONT><FONT face=Symbol size=1>2</FONT>, determine an 
+  angle<FONT size=2> </FONT><FONT face=Symbol size=2>q </FONT>for the first 
+  stage. We set <FONT face=Symbol><EM>q</EM> = <EM>q</EM> </FONT><FONT 
+  face=Symbol size=1>2</FONT>. </P>
+  <LI>
+  <P align=left>Adjust the first stage to achieve <FONT face=Symbol 
+  size=3><EM>q</EM></FONT><FONT face=Symbol size=2> </FONT><FONT face=Symbol 
+  size=1>1</FONT><FONT face=Symbol size=2>= </FONT><FONT face=Symbol 
+  size=3><EM>q</EM></FONT><FONT face=Symbol size=2> </FONT><FONT size=2>. 
+  </FONT></P></LI></UL>
+<P>Because the target of the outer loop is <FONT face=Symbol 
+size=3><EM>q</EM></FONT><FONT face=Symbol size=2> </FONT><FONT face=Symbol 
+size=1>2</FONT><FONT face=Symbol size=2> = 0</FONT><FONT size=2>, </FONT>the 
+final target of the system is <FONT face=Symbol size=3><EM>q</EM></FONT><FONT 
+face=Symbol size=2> </FONT><FONT face=Symbol size=1>1</FONT><FONT face=Symbol 
+size=2> =</FONT><FONT face=Symbol size=3><EM> q</EM></FONT><FONT face=Symbol 
+size=2> </FONT><FONT face=Symbol size=1>2</FONT><FONT face=Symbol size=2> = 
+0</FONT><FONT size=2>.</FONT></P>
+<P align=center>&nbsp;<A 
+name="Figure 2 Two Stage Inverted Pendulum Control System">Figure 2 <I>Two Stage 
+Inverted Pendulum Control System</I></A></P>
+<P align=center><IMG height=238 
+src="Two Stage Inverted Pendulum_files/twosta2.gif" width=579></P>
+<P align=center>&nbsp;</P>
+<P align=center>&nbsp;<A name="Figure 3 Control Strategy">Figure 3 <I>Control 
+Strategy</I></A></P>
+<P align=center><IMG height=199 
+src="Two Stage Inverted Pendulum_files/twosta3.gif" width=274></P>
+<P><A 
+href="http://www.aptronix.com/fuzzynet/applnote/twostage.htm#Application Notes">Back 
+to Top</A></P>
+<P><A name="CONTROLLER DESIGN"><B>CONTROLLER DESIGN </B></A></P>
+<P>To create a fuzzy controller, let us start with analyzing control behaviors 
+of the inverted pendulum system. For simplicity, we will use a single stage 
+inverted pendulum shown in <A 
+href="http://www.aptronix.com/fuzzynet/applnote/twostage.htm#Figure 4 Single Stage Inverted Pendulum">Figure 
+4</A>. </P>
+<P>Basically, a controller should reflect the relation between two 
+variables<FONT size=2> </FONT><FONT face=Symbol size=3><EM>q</EM></FONT><FONT 
+size=3><EM> </EM></FONT>and<EM> f</EM>. In other words, if we know the relation 
+between <FONT face=Symbol size=3><EM>q</EM></FONT> and <EM>f</EM> , we can use 
+it to write control rules. We know if <FONT face=Symbol size=2>q</FONT><FONT 
+size=2> </FONT>is large, <EM>f</EM> should be large; and if <FONT face=Symbol 
+size=3><EM>q</EM></FONT><FONT size=3> </FONT>is small, <EM>f</EM> should be 
+small too. </P>
+<P align=center>&nbsp;<A name="Figure 4 Single Stage Inverted Pendulum">Figure 4 
+<I>Single Stage Inverted Pendulum</I></A></P>
+<P align=center><IMG height=154 
+src="Two Stage Inverted Pendulum_files/twosta4.gif" width=371></P>
+<P align=left><A 
+href="http://www.aptronix.com/fuzzynet/applnote/twostage.htm#Application Notes">Back 
+to Top</A></P>
+<P><A name="Control Curve"><B>Control Curve</B></A></P>
+<P>The relation between <FONT face=Symbol><EM>q</EM></FONT> and <EM>f</EM> can 
+be denoted as a control curve (<A 
+href="http://www.aptronix.com/fuzzynet/applnote/twostage.htm#Figure 5 Control Curve: Linear Control and Nonlinear Control">Figure 
+5</A>). Using conventional PID controller, this control curve is a straight line 
+(<A 
+href="http://www.aptronix.com/fuzzynet/applnote/twostage.htm#Figure 5 Control Curve: Linear Control and Nonlinear Control">Figure 
+5a</A>). However, the relation between<EM> </EM><FONT 
+face=Symbol><EM>q</EM></FONT> and <EM>f</EM> is nonlinear because force 
+<EM>f</EM> should increase very fast when angle <FONT face=Symbol 
+size=2>q</FONT><FONT size=2> </FONT>is large in order to achieve<FONT 
+size=4><EM> </EM></FONT><FONT face=Symbol size=3><EM>q </EM></FONT><FONT 
+face=Symbol size=2>= 0</FONT><FONT size=2>. </FONT>This improves response 
+because the force is larger than that given by the linear curve when error is 
+large. On the other hand, when angle <FONT face=Symbol size=2>q</FONT><FONT 
+size=2> </FONT>is very small, force <EM>f</EM> should be very small to reduce 
+overshooting. A typical nonlinear control curve is shown in <A 
+href="http://www.aptronix.com/fuzzynet/applnote/twostage.htm#Figure 5 Control Curve: Linear Control and Nonlinear Control">Figure 
+5b</A>. </P>
+<P>For the system we developed, the actual control curve is a little different 
+from that in<A 
+href="http://www.aptronix.com/fuzzynet/applnote/twostage.htm#Figure 5 Control Curve: Linear Control and Nonlinear Control"> 
+Figure 5b</A>. Because of the physical characteristics, such as friction, force 
+should be larger than a threshold value in order to move the cart. In addition, 
+as a limitation of the output of a servo motor, force reaches its maximum value 
+at a certain angle. The control curve for the actual inverted pendulum control 
+system is illustrated in <A 
+href="http://www.aptronix.com/fuzzynet/applnote/twostage.htm#Figure 5 Control Curve: Linear Control and Nonlinear Control">Figure 
+5c</A>. </P>
+<P>We can create a fuzzy controller from a control curve. </P>
+<P align=center><B>&nbsp;</B><A 
+name="Figure 5 Control Curve: Linear Control and Nonlinear Control">Figure 5 
+<I>Control Curve: Linear Control and Nonlinear Control</I></A></P>
+<P align=center><IMG height=196 
+src="Two Stage Inverted Pendulum_files/twosta5.gif" width=549></P>
+<P align=center><A name="Figure 6 Critical Points on a Control Curve">Figure 6 
+<I>Critical Points on a Control Curve</I></A></P>
+<P align=center><IMG height=265 
+src="Two Stage Inverted Pendulum_files/twosta6.gif" width=261></P>
+<P align=center><B>&nbsp;&nbsp;</B><A 
+name="Figure 7 Define Labels &amp; Membership Functions from Control Curve">Figure 
+7 <I>Define Labels &amp; Membership Functions from Control Curve</I></A></P>
+<P align=center><IMG height=432 
+src="Two Stage Inverted Pendulum_files/twosta7.gif" width=508></P>
+<P>There are some critical points on a control curve that can be used for 
+controller design. Control curve in <A 
+href="http://www.aptronix.com/fuzzynet/applnote/twostage.htm#Figure 6 Critical Points on a Control Curve">Figure 
+6</A> shows six points of this kind. </P>
+<P>Rules can also be obtained from the control curve. There are two input 
+variables for our controller. Suppose the velocity of the angle change is zero, 
+we have a control curve for angle <FONT face=Symbol 
+size=3><EM>q</EM></FONT><FONT size=3> </FONT>as shown in<FONT size=2> </FONT><A 
+href="http://www.aptronix.com/fuzzynet/applnote/twostage.htm#Figure 7 Define Labels &amp; Membership Functions from Control Curve">Figure 
+7</A>. From this curve, we obtain following rules, </P>
+<BLOCKQUOTE>
+  <BLOCKQUOTE>
+    <P>IF <FONT face=Symbol size=3><EM>q</EM></FONT><FONT size=3><EM> 
+    </EM></FONT>is <B>NL</B> THEN<EM> f </EM>is <B>NL<BR></B>IF<EM> </EM><FONT 
+    face=Symbol><EM>q</EM></FONT> is <B>NM</B> THEN <EM>f </EM>is 
+    <B>NM<BR></B>IF <FONT face=Symbol><EM>q </EM></FONT>is <B>NS</B> THEN <EM>f 
+    </EM>is <B>NS<BR></B>IF <FONT face=Symbol><EM>q </EM></FONT>is <B>PS</B> 
+    THEN <EM>f </EM>is <B>PS<BR></B>IF <FONT face=Symbol><EM>q </EM></FONT>is 
+    <B>PM</B> THEN <EM>f </EM>is <B>PM<BR></B>IF <FONT face=Symbol><EM>q 
+    </EM></FONT>is <B>PL</B> THEN <EM>f</EM> is 
+<B>PL</B></P></BLOCKQUOTE></BLOCKQUOTE>
+<P>Note that these rules are obtained when the velocity of the angle change 
+<FONT face=Symbol><EM>q</EM></FONT>&amp; equals zero. When <FONT 
+face=Symbol><EM>q&amp; </EM></FONT>is not zero, the control curve should be 
+shifted. Velocity is given five labels and get the rules obtained listed in <A 
+href="http://www.aptronix.com/fuzzynet/applnote/twostage.htm#Table 1 Control Rules">Table 
+1</A> and shown in <A 
+href="http://www.aptronix.com/fuzzynet/applnote/twostage.htm#Figure 8 Control Curves When Velocity Is Not Zero">Figure 
+8</A>. From this figure, we see that the curves are not simply obtained by 
+shifting. If curves were obtained by shifting, more labels for angle<FONT 
+size=5><EM> </EM></FONT><FONT face=Symbol size=3><EM>q</EM></FONT> would be 
+necessary. Here we use as few labels as possible to keep the controller simple. 
+</P>
+<P align=center>&nbsp;&nbsp;<A name="Table 1 Control Rules">Table 1 <I>Control 
+Rules</I></A></P>
+<DIV align=center>
+<CENTER>
+<TABLE cellSpacing=1 cellPadding=7 width=444 border=1>
+  <TBODY>
+  <TR>
+    <TD align=middle width="14%">&nbsp;</TD>
+    <TD align=middle width="12%">&nbsp;</TD>
+    <TD align=middle width="14%">&nbsp;</TD>
+    <TD align=middle width="14%">&nbsp;</TD>
+    <TD align=middle width="15%"><I>Velocity</I></TD>
+    <TD align=middle width="15%">&nbsp;</TD>
+    <TD align=middle width="16%">&nbsp;</TD></TR>
+  <TR>
+    <TD width="14%">&nbsp;</TD>
+    <TD width="12%">&nbsp;</TD>
+    <TD width="14%"><B>NL</B></TD>
+    <TD width="14%"><B>NM</B></TD>
+    <TD width="15%"><B>ZR</B></TD>
+    <TD width="15%"><B>PM</B></TD>
+    <TD width="16%"><B>PL</B></TD></TR>
+  <TR>
+    <TD width="14%">&nbsp;</TD>
+    <TD width="12%"><B>NL</B></TD>
+    <TD width="14%"><B>NL</B></TD>
+    <TD width="14%"><B>NL</B></TD>
+    <TD width="15%"><B>NL</B></TD>
+    <TD width="15%"><B>NM</B></TD>
+    <TD width="16%"><B>NS</B></TD></TR>
+  <TR>
+    <TD width="14%">&nbsp;</TD>
+    <TD width="12%"><B>NM</B></TD>
+    <TD width="14%"><B>NL</B></TD>
+    <TD width="14%"><B>NL</B></TD>
+    <TD width="15%"><B>NM</B></TD>
+    <TD width="15%"><B>NS</B></TD>
+    <TD width="16%"><B>PS</B></TD></TR>
+  <TR>
+    <TD align=middle width="14%"><I>Angles</I></TD>
+    <TD align=middle width="12%"><B>NS</B></TD>
+    <TD align=middle width="14%"><B>NL</B></TD>
+    <TD align=middle width="14%"><B>NM</B></TD>
+    <TD align=middle width="15%"><B>NS</B></TD>
+    <TD align=middle width="15%"><B>PS</B></TD>
+    <TD align=middle width="16%"><B>PM</B></TD></TR>
+  <TR>
+    <TD align=middle width="14%">&nbsp;</TD>
+    <TD align=middle width="12%"><B>PS</B></TD>
+    <TD align=middle width="14%"><B>NM</B></TD>
+    <TD align=middle width="14%"><B>NS</B></TD>
+    <TD align=middle width="15%"><B>PS</B></TD>
+    <TD align=middle width="15%"><B>PM</B></TD>
+    <TD align=middle width="16%"><B>PL</B></TD></TR>
+  <TR>
+    <TD align=middle width="14%">&nbsp;</TD>
+    <TD align=middle width="12%"><B>PM</B></TD>
+    <TD align=middle width="14%"><B>NS</B></TD>
+    <TD align=middle width="14%"><B>PS</B></TD>
+    <TD align=middle width="15%"><B>PM</B></TD>
+    <TD align=middle width="15%"><B>PL</B></TD>
+    <TD align=middle width="16%"><B>PL</B></TD></TR>
+  <TR>
+    <TD align=middle width="14%">&nbsp;</TD>
+    <TD align=middle width="12%"><B>PL</B></TD>
+    <TD align=middle width="14%"><B>PS</B></TD>
+    <TD align=middle width="14%"><B>PM</B></TD>
+    <TD align=middle width="15%"><B>PL</B></TD>
+    <TD align=middle width="15%"><B>PL</B></TD>
+    <TD align=middle width="16%"><B>PL</B></TD></TR></TBODY></TABLE></CENTER></DIV>
+<P align=center>&nbsp;&nbsp;<A 
+name="Figure 8 Control Curves When Velocity Is Not Zero">Figure 8 <I>Control 
+Curves When Velocity Is Not Zero</I></A></P>
+<P align=center><IMG height=266 
+src="Two Stage Inverted Pendulum_files/twosta8.gif" width=266></P>
+<P>&nbsp;</P>
+<P>In actuality, the output of the FIU(Fuzzy Inference Unit) is a voltage sent 
+to the motor, used to produce the force. However, the design principle is the 
+same. </P>
+<P><A 
+href="http://www.aptronix.com/fuzzynet/applnote/twostage.htm#Application Notes">Back 
+to Top</A></P>
+<P><A name=TUNING><B>TUNING </B></A></P>
+<P>FIDE's tools (such as Analyzer, MF-editor, Composer, etc.) are used to modify 
+our design, as well as to tune membership functions and rules, because the 
+actual control curve for a control system is essentially unknown. The tuning of 
+membership functions will adjust the control curve (see <A 
+href="http://www.aptronix.com/fuzzynet/applnote/twostage.htm#Figure 7 Define Labels &amp; Membership Functions from Control Curve">Figure 
+7</A>).</P>
+<P>After tuning, our final design of the controller is obtained. The FIU source 
+code created in FIDE for the two stage inverted pendulum can be found in 
+Appendix A. The labels and membership functions for the variables of our 
+controller are shown in <A 
+href="http://www.aptronix.com/fuzzynet/applnote/twostage.htm#Figure 9 Labels &amp; Membership Functions of Variable Angle">Figures 
+9</A>, <A 
+href="http://www.aptronix.com/fuzzynet/applnote/twostage.htm#Figure 10 Labels &amp; Membership Functions of Variable Velocity">10</A>, 
+and <A 
+href="http://www.aptronix.com/fuzzynet/applnote/twostage.htm#Figure 11 Labels &amp; Membership Functions of Variable Voltage">11</A>. 
+<A 
+href="http://www.aptronix.com/fuzzynet/applnote/twostage.htm#Figure 12 Control Curve : Voltage(Angle)">Figures 
+12</A> and <A 
+href="http://www.aptronix.com/fuzzynet/applnote/twostage.htm#Figure 13 Control Curve : Voltage(Velocity)">13 
+</A>depict the control curves, and the I/O response surface of the controller is 
+displayed in <A 
+href="http://www.aptronix.com/fuzzynet/applnote/twostage.htm#Figure 14 Input/Output Control Surface">Figure 
+14</A>. </P>
+<P align=center>&nbsp;<A 
+name="Figure 9 Labels &amp; Membership Functions of Variable Angle">Figure 9 
+<I>Labels &amp; Membership Functions of Variable </I><B><I>Angle</I></B></A></P>
+<P align=center><IMG height=312 
+src="Two Stage Inverted Pendulum_files/twosta9.gif" width=360></P>
+<P align=center>&nbsp;</P>
+<P align=center>&nbsp;<A 
+name="Figure 10 Labels &amp; Membership Functions of Variable Velocity">Figure 
+10 <I>Labels &amp; Membership Functions of Variable 
+</I><B><I>Velocity</I></B></A></P>
+<P align=center><IMG height=311 
+src="Two Stage Inverted Pendulum_files/twosta10.gif" width=373></P>
+<P>&nbsp;</P>
+<P align=center>&nbsp;<A 
+name="Figure 11 Labels &amp; Membership Functions of Variable Voltage">Figure 11 
+<I>Labels &amp; Membership Functions of Variable 
+</I><B><I>Voltage</I></B></A></P>
+<P align=center><IMG height=308 
+src="Two Stage Inverted Pendulum_files/twosta11.gif" width=373></P>
+<P>&nbsp;</P>
+<P align=center>&nbsp;<A name="Figure 12 Control Curve : Voltage(Angle)">Figure 
+12 <I>Control Curve : </I><B><I>Voltage(Angle)</I></B></A></P>
+<P align=center><IMG height=307 
+src="Two Stage Inverted Pendulum_files/twosta12.gif" width=358></P>
+<P>&nbsp;&nbsp;</P>
+<P align=center>&nbsp;<A 
+name="Figure 13 Control Curve : Voltage(Velocity)">Figure 13 <I>Control Curve : 
+</I><B><I>Voltage(Velocity)</I></B></A></P>
+<P align=center><IMG height=328 
+src="Two Stage Inverted Pendulum_files/twosta13.gif" width=410></P>
+<P><B></B>&nbsp;</P>
+<P align=center><B>&nbsp;</B><A 
+name="Figure 14 Input/Output Control Surface">Figure 14 <I>Input/Output Control 
+Surface</I></A></P>
+<P align=center><IMG height=288 
+src="Two Stage Inverted Pendulum_files/twosta14.gif" width=325></P>
+<P><A 
+href="http://www.aptronix.com/fuzzynet/applnote/twostage.htm#Application Notes">Back 
+to Top</A></P>
+<P><A name=IMPLEMENTATION><B>IMPLEMENTATION</B></A></P>
+<P>When we are satisfied with our design, we then generate the machine code for 
+a specific microprocessor. </P>
+<P>For our two-stage inverted pendulum, a MC68HC11 MCU is used for 
+implementation. Utilizing the RTC command provided in FIDE's menu, we can 
+convert the object output of a designed fuzzy controller into Motorola MCU's 
+assembly code (FIDE V1.0 supports three Motorola chips: MC6805, MC68HC05 and 
+MC68HC11). For details on how to use the RTC command, please refer to the FIDE 
+User's Manual, Chapter 5. </P>
+<P>The process of tuning parameters shown in <A 
+href="http://www.aptronix.com/fuzzynet/applnote/twostage.htm#Figure 2 Two Stage Inverted Pendulum Control System">Figure 
+2</A> is as follows:</P>
+<BLOCKQUOTE>
+  <P>1. Determine <FONT face=Symbol size=4>l</FONT><FONT face=Symbol 
+  size=2>5</FONT><FONT size=2> </FONT>to get a suitable level of motor power. If 
+  <FONT face=Symbol size=4>l</FONT><FONT face=Symbol size=2>6</FONT><FONT 
+  size=2> </FONT>is large, the force applied to the cart will be large. 
+</P></BLOCKQUOTE>
+<BLOCKQUOTE>
+  <P>2. Determine <FONT face=Symbol size=4>l</FONT><FONT face=Symbol 
+  size=2>4</FONT><FONT size=2> </FONT>and <FONT face=Symbol size=4>l</FONT><FONT 
+  face=Symbol size=2>5</FONT><FONT size=2> </FONT>to keep first stage stable. 
+  These two parameters are very similar to those in a PD controller. A larger 
+  <FONT face=Symbol size=4>l</FONT><FONT face=Symbol size=2>4</FONT><FONT 
+  size=2> </FONT>produces a response with smaller overshoot and less 
+  oscillations than a smaller one while a smaller <FONT face=Symbol 
+  size=4>l</FONT><FONT face=Symbol size=2>4</FONT><FONT size=2> </FONT>produces 
+  a response that is closer to the set point. A larger<FONT size=5> </FONT><FONT 
+  face=Symbol size=4>l</FONT><FONT face=Symbol size=2>5</FONT><FONT size=2> 
+  </FONT>would decrease overshoot and oscillations and cause a long rising time. 
+  These two parameters should be adjusted together. </P>
+  <P>3. Determine<FONT size=4> </FONT><FONT face=Symbol size=4>l</FONT><FONT 
+  face=Symbol size=2>1</FONT>, <FONT face=Symbol size=4>l</FONT><FONT 
+  face=Symbol size=2>2</FONT><FONT size=2>,</FONT><FONT size=4> </FONT><FONT 
+  face=Symbol size=4>l</FONT><FONT face=Symbol size=2>3</FONT><FONT size=2> 
+  </FONT>to keep the whole system stable<FONT size=2>. </FONT>Choose<FONT 
+  size=4> </FONT><FONT face=Symbol size=4>l</FONT><FONT face=Symbol 
+  size=2>3</FONT> to<FONT size=2> </FONT>provide a suitable setpoint for the 
+  first stage loop. This parameter should be adjusted with <FONT face=Symbol 
+  size=4>l</FONT><FONT face=Symbol size=2>1</FONT>and<FONT size=4> </FONT><FONT 
+  face=Symbol size=4>l</FONT><FONT face=Symbol size=2>2</FONT>. Adjusting<FONT 
+  size=4> </FONT><FONT face=Symbol size=4>l</FONT><FONT face=Symbol 
+  size=2>1</FONT> and<FONT size=4> </FONT><FONT face=Symbol size=3>l</FONT><FONT 
+  face=Symbol size=1>2</FONT><FONT size=2> </FONT>is similar to that of<FONT 
+  size=5> </FONT><FONT face=Symbol size=4>l</FONT><FONT face=Symbol 
+  size=2>4</FONT><FONT size=2> </FONT>and <FONT face=Symbol size=4>l</FONT><FONT 
+  face=Symbol size=2>5</FONT><FONT size=2>. </FONT></P></BLOCKQUOTE>
+<P>Appendix B provides the assembly code generated from the source code as shown 
+in Appendix A. The generated code uses a memory of 870 bytes on a MC68HC11 MCU. 
+One single control circle takes 4.48 ms. FIU is called two times in a control 
+circle. </P>
+<P><A 
+href="http://www.aptronix.com/fuzzynet/applnote/twostage.htm#Application Notes">Back 
+to Top</A></P>
+<P><A name=COMMENTS><B>COMMENTS</B></A></P>
+<P>Control engineers are aware of the difficulty in designing a controller for a 
+two-stage inverted pendulum using conventional approaches. We have shown in this 
+application note, how easily a system is designed with fuzzy logic using FIDE. 
+It is surprising that only an 8-bit MCU is required. Fuzzy system development 
+environment provided by FIDE can lead not only to a faster development circle, 
+but also lower costs. </P>
+<P>&nbsp;<A 
+href="http://www.aptronix.com/fuzzynet/applnote/twostage.htm#Application Notes">Back 
+to Top</A></P>
+<P align=center><FONT face="Times New Roman" size=3>&nbsp;</FONT><FONT 
+face="Times New Roman"><B>For Further Information Please Contact:</B></FONT></P>
+<DIV align=center>
+<CENTER>
+<ADDRESS><FONT face="Times New Roman"><B>&nbsp;</B></FONT><FONT 
+face="Times New Roman" size=4><B>Aptronix Incorporated<BR></B></FONT><FONT 
+face="Times New Roman" size=3>2040 Kington Place<BR>Santa Clara, CA 95051<BR>Tel 
+(408) 261-1898 <BR>Fax (408) 490-2729</FONT> </ADDRESS></CENTER></DIV>
+<BLOCKQUOTE>
+  <BLOCKQUOTE>
+    <DIV align=center>
+    <CENTER>
+    <ADDRESS><FONT face="Times New Roman" size=3>FuzzyNet </FONT><A 
+    href="http://www.aptronix.com/fuzzynet"><FONT face="Times New Roman" 
+    size=3>http://www.aptronix.com/fuzzynet</FONT></A><FONT 
+    face="Times New Roman" size=3><BR></FONT><FONT size=3>Email: </FONT><A 
+    href="mailto:fuzzynet@aptronix.com"><FONT 
+    size=3>fuzzynet@aptronix.com</FONT></A><FONT size=3> 
+    </FONT></ADDRESS></CENTER></DIV></BLOCKQUOTE></BLOCKQUOTE>
+<P align=left><A href="http://www.aptronix.com/fuzzynet/index.htm"><FONT 
+size=3>Back to Home</FONT></A><FONT size=3>&nbsp;</FONT> </P>
+<HR>
+
+<P><FONT face="Times New Roman" size=3>Weijing Zhang, Applications 
+Engineer</FONT>.<BR>Copyright © 1992 by <FONT face="Times New Roman" 
+size=3>Aptronix Inc.</FONT><BR>Revised: <!--webbot bot="TimeStamp" s-format="%B %d, %Y"
+s-type="EDITED" startspan -->October 
+21, 
+1996<!--webbot
+bot="TimeStamp" endspan i-checksum="31569" -->.</P></BODY></HTML>
